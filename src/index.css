@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.light {
+    --primary: 245, 245, 245;
+    --secondary: 30, 30, 30;
+}
+
+.dark{
+    --primary: 30, 30, 30;
+    --secondary: 245, 245, 245;
+}
+
+
+html {
+    font-family: 'Anta', sans-serif;
+}
+
+
+body::-webkit-scrollbar {
+   display: none;
+}
