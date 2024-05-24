@@ -2,33 +2,34 @@ import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
+import { FaHome } from "react-icons/fa";
+import { FaSuitcase } from "react-icons/fa6";
+import { FaFileAlt } from "react-icons/fa";
 
-
-
-const Navbar: React.FC<{theme: string; setTheme: React.Dispatch<React.SetStateAction<string>>}> = ({theme, setTheme}) => {
+const Navbar: React.FC<{ theme: string; setTheme: React.Dispatch<React.SetStateAction<string>> }> = ({ theme, setTheme }) => {
   const location = useLocation()
   const path = location.pathname
 
   useEffect(() => {
     const page = navelements.find((element) => element.link === path)
     document.title = `Karthikeya | ${page?.name}`
-  }, [path])  
+  }, [path])
 
   const navelements = [
     {
       name: 'Home',
       link: '/',
-      mname: 'H',
+      logo: FaHome,
     },
     {
       name: 'Projects',
       link: '/projects',
-      mname: 'P',
+      logo: FaSuitcase,
     },
     {
       name: 'Resume',
       link: '/resume',
-      mname: 'R',
+      logo: FaFileAlt,
     },
   ]
 
@@ -37,19 +38,19 @@ const Navbar: React.FC<{theme: string; setTheme: React.Dispatch<React.SetStateAc
   };
 
   return (
-    <div className='h-20 w-screen fixed top-0 bg-primary text-secondary'>
-      <nav className='w-full h-full px-12 flex flex-row flex-nowrap justify-between items-center'>
+    <nav className='z-20 h-full w-screen fixed top-0 text-secondary '>
+      <div className='h-20 px-4 md:px-12 backdrop-blur-lg flex flex-row flex-nowrap justify-between items-center'>
 
-        <div className='text-3xl text-secondary'>
+        <div className='text-2xl font-bold md:text-3xl text-secondary'>
           <a href='/'><h1>Karthikeya🚀</h1></a>
         </div>
 
-        <div className='hidden lg:flex  text-xl gap-4 backdrop-blur-md p-1 justify-center items-center border-2 border-secondary/40 bg-primary'>
+        <div className='hidden md:flex text-xl gap-4 justify-center items-center border-2 border-secondary/40 bg-primary'>
           {
             navelements.map((element) => {
-              const active = path === element.link ? 'bg-secondary/40 text-secondary' : ''
+              const active = path === element.link ? 'bg-secondary text-primary' : 'bg-primary text-secondary'
               return (
-                <Link to={element.link} key={element.name} className={`w-32 p-2 text-center bg-primary text-secondary hover:bg-secondary/40 hover:text-secondary duration-150 ${active} `}>
+                <Link to={element.link} key={element.name} className={`w-32 p-2 hover:bg-secondary hover:text-primary text-center duration-150 ${active} `}>
                   {element.name}
                 </Link>
               )
@@ -61,8 +62,25 @@ const Navbar: React.FC<{theme: string; setTheme: React.Dispatch<React.SetStateAc
           {theme === "dark" ? <MdOutlineLightMode size={24} /> : <MdDarkMode size={24} />}
         </div>
 
-      </nav>
-    </div>
+      </div>
+
+      <div className='fixed bottom-0 left-0 right-0 w-full md:hidden z-20 '>
+        <div className='flex flex-row flex-nowrap justify-between border-t-2 border-secondary items-center h-full'>
+          {
+            navelements.map((element) => {
+              const active = path === element.link ? 'bg-secondary text-primary' : 'bg-primary text-secondary'
+              return (
+                <Link to={element.link} key={element.name} className={`w-1/3 h-14 p-2 flex justify-center  items-center text-center duration-150 ${active}`}>
+                  <element.logo size={26} />
+                </Link>
+              )
+            })
+          }
+        </div>
+      </div>
+
+
+    </nav>
   )
 }
 

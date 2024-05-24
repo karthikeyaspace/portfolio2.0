@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-        sans: 'Anta',
+        sans: ['Roboto','sans-serif'], 
     },
     extend: {
       colors: {

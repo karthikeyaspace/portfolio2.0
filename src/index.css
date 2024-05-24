@@ -7,11 +7,11 @@
 
 .light {
     --primary: 245, 245, 245;
-    --secondary: 30, 30, 30;
+    --secondary: 0, 0, 0;
 }
 
 .dark{
-    --primary: 30, 30, 30;
+    --primary: 0, 0, 0;
     --secondary: 245, 245, 245;
 }
 
@@ -23,4 +23,23 @@ html {
 
 body::-webkit-scrollbar {
    display: none;
+}
+
+
+.textLayer{
+    display: none;
+}
+
+.annotationLayer{
+    display: none;
+}
+
+.react-pdf__Page{
+    background-color: var(--primary) !important;
+}
+
+.react-pdf__Page__canvas{
+    margin: auto;
+    border: 1px solid rgb(var(--secondary));
+    box-shadow: 0 0 30px 0 rgba(var(--secondary), 0.6);
 }
