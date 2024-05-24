@@ -54,7 +54,7 @@ const Landing: React.FC<{theme: string}> = ({theme}) => {
                     <a href="#"> <FaLinkedin size={32} /> </a>
                     <a href="#"> <FaTwitter size={32} /> </a>
                 </div>
-                <div className="bgimg bg-cover bg-center absolute top-0 left-0 w-full h-full z-0" style={{backgroundImage: `url('/src/assets/${img}.png')`}} ></div>
+                <div className="bgimg bg-cover bg-center absolute top-0 left-0 w-full h-full z-0" style={{backgroundImage: `url('${img}.png')`}} ></div>
 
             </div>
         </div>
