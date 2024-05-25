@@ -50,9 +50,9 @@ const Landing: React.FC<{theme: string}> = ({theme}) => {
                 </Link>
 
                 <div className='flex flex-row gap-4 mt-6 z-10'>
-                    <a href="#"> <FaGithub size={32} /> </a>
-                    <a href="#"> <FaLinkedin size={32} /> </a>
-                    <a href="#"> <FaTwitter size={32} /> </a>
+                    <a href="https://github.com/karthikeyaspace" target='_blank'> <FaGithub size={32} /> </a>
+                    <a href="https://linkedin.com/in/karthikeyaveruturi" target='_blank'> <FaLinkedin size={32} /> </a>
+                    <a href="https://x.com/karthikeyaspace" target='_blank'> <FaTwitter size={32} /> </a>
                 </div>
                 <div className="bgimg bg-cover bg-center absolute top-0 left-0 w-full h-full z-0" style={{backgroundImage: `url('${img}.png')`}} ></div>
 
