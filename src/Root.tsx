@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './pages/Navbar'
 import { Outlet } from 'react-router-dom'
 import ScrollToTop from './components/ScrollTop';
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface OutletContextValue {
   theme: string;
@@ -10,7 +9,7 @@ interface OutletContextValue {
 
 const Root: React.FC = () => {
 
-  const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState<string>(() => {
     const storedTheme = localStorage.getItem('theme');
     const sysTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
     return storedTheme !== null ? storedTheme : sysTheme;

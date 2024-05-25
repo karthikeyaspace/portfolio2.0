@@ -1,6 +1,5 @@
 import React from 'react'
 import data from '../assets/Projectdata'
-import { FaGithub } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Projects2: React.FC = () => {
