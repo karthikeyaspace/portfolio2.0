@@ -23,7 +23,7 @@ const Resume: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-20 bg-primary transition-all min-h-screen">
+    <div className="mt-10 md:mt-14 bg-primary  min-h-screen">
       <div className="">
         <Document file={pdf} className="pdf"  >
           <Page pageNumber={1} scale={scale}  />

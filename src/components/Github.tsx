@@ -4,7 +4,7 @@ import GitHubCalendar from "react-github-calendar"
 const Github: React.FC = () => {
 
   return (
-    <div className='mt-16 w-full'>
+    <div className='mt-12 w-full'>
       <div className='flex flex-row items-end flex-wrap mb-4 gap-1' >
         <h1 className='text-3xl md:text-4xl'>Github Contributions</h1>
         <div className='w-full h-[1px] bg-secondary'></div>

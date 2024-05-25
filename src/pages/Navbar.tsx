@@ -38,8 +38,8 @@ const Navbar: React.FC<{ theme: string; setTheme: React.Dispatch<React.SetStateA
   };
 
   return (
-    <nav className='z-20 h-full w-screen fixed top-0 text-secondary '>
-      <div className='h-20 px-4 md:px-12 backdrop-blur-lg flex flex-row flex-nowrap justify-between items-center'>
+    <nav className='z-20 h-20 w-screen fixed top-0 text-secondary '>
+      <div className='h-full px-4 md:px-12 backdrop-blur-lg flex flex-row flex-nowrap justify-between items-center'>
 
         <div className='text-2xl font-bold md:text-3xl text-secondary'>
           <a href='/'><h1>Karthikeya🚀</h1></a>
