@@ -6,6 +6,7 @@
 
 
 .light {
+    /* --primary: 255,219,172; */
     --primary: 245, 245, 245;
     --secondary: 0, 0, 0;
 }

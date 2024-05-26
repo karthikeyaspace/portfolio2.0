@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <LangGrid />
       <TechGrid />
       <Projects2 />
-      <Github />
+      <Github theme={theme}/>
     </div>
   )
 }

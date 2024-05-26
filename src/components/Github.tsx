@@ -1,7 +1,7 @@
 import React from 'react'
 import GitHubCalendar from "react-github-calendar"
 
-const Github: React.FC = () => {
+const Github: React.FC<{theme:string}> = ({theme}) => {
 
   return (
     <div className='mt-12 w-full'>
@@ -15,7 +15,7 @@ const Github: React.FC = () => {
           blockSize={13}
           blockMargin={5}
           errorMessage="Could not load GitHub calendar of karthikeyaspace"
-          colorScheme="light"
+          colorScheme={theme === 'light' ? 'dark' : 'light'}
           fontSize={13}
           style={{ cursor: 'crosshair' }}
         />
