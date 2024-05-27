@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './pages/Navbar'
 import { Outlet } from 'react-router-dom'
 import ScrollToTop from './components/ScrollTop';
+import { Analytics } from '@vercel/analytics/react';
 
 interface OutletContextValue {
   theme: string;
@@ -32,6 +33,7 @@ const Root: React.FC = () => {
       <div className='pt-20 min-h-screen bg-primary  text-secondary'>
         <Outlet context={context} />
       </div>
+      <Analytics  />
     </div>
   )
 }
