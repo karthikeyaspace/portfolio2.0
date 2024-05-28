@@ -1,6 +1,13 @@
 const data = {
     "projects": [
         {
+            "name": "Shortn",
+            "description": "Shortn is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and MongoDB. It has a interactive user-friendly interface and is easy to use.",
+            "github": "https://github.com/karthikeyaspace/shortn",
+            "techStack": ["TypeScript", "Tailwind CSS", "Node JS", "MongoDB"],
+            "tryout": ""
+        },
+        {
             "name": "The Coder Companion",
             "description": "The coder Companion is a next generation coding platform equiped with gemini. It helps user to code efficiently. The AI powered code completion helps user to code faster and helps you to clear your queries.",
             "github": "https://github.com/karthikeyaspace/theCoderCompanion",
