@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '../assets/Projectdata'
 import { FaGithub } from 'react-icons/fa'
+import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 const Projects: React.FC = () => {
   console.log(data)
@@ -12,10 +13,10 @@ const Projects: React.FC = () => {
             <div className='px-6 py-4'>
               <div className='flex flex-row justify-between  mb-2'>
                 <h3 className='font-bold text-xl mb-2'>{project.name}</h3>
-                <div className='flex flex-row justify-center gap-2'>
+                <div className='flex flex-row justify-center gap-4'>
                   <a href={project.github}> <FaGithub size={32} /> </a>
                   {project.tryout &&
-                    <a href={project.tryout}> <p className='font-bold text-lg text-blue-600'>Tryout</p></a>
+                    <a href={project.tryout}> <FaArrowRightFromBracket size={32} /> </a>
                   }
                 </div>
               </div>
