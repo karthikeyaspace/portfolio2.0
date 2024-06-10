@@ -14,6 +14,7 @@ const About: React.FC = () => {
           I am constantly seeking new opportunities to learn and grow and love collaborative work and team environments.
           Apart from tech stuff, I like to play basketball, read books, and watch movies. 
         </p>
+        <p className='text-lg mt-2'>view my v1 <a href="https://karthikeyaveruturi.vercel.app" className='text-blue-600'>portfolio</a> </p>
       </div>
     </div>
   )

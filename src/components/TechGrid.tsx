@@ -5,6 +5,7 @@ import { SiCanva } from "react-icons/si";
 import { FaDiscord } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import { SiPostman } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 
 const TechGrid: React.FC = () => {
 
@@ -15,14 +16,14 @@ const TechGrid: React.FC = () => {
       color: 'text-blue-500'
     },
     {
-      name: 'Google Cloud Platform',
+      name: 'GCP',
       icon: DiGoogleCloudPlatform,
       color: 'text-yellow-500'
     },
     {
       name: 'Canva',
       icon: SiCanva,
-      color: 'text-red-500'
+      color: 'text-blue-600'
     },
     {
       name: 'Discord',
@@ -32,12 +33,17 @@ const TechGrid: React.FC = () => {
     {
       name: 'Vercel',
       icon: IoLogoVercel,
-      color: 'text-blue-500'
+      color: 'text-black'
     },
     {
       name: 'Postman',
       icon: SiPostman,
-      color: 'text-yellow-500'
+      color: 'text-orange-600'
+    },
+    {
+      name: "Github",
+      icon: SiGithub,
+      color: "text-black"
     }
   ]
 
