@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './pages/Navbar'
+import Navbar from './components/Navbar'
 import { Outlet } from 'react-router-dom'
 import ScrollToTop from './components/ScrollTop';
 import { Analytics } from '@vercel/analytics/react';

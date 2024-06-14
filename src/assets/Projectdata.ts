@@ -5,7 +5,7 @@ const data = {
             "description": "Shortn is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and MongoDB. It has a interactive user-friendly interface and is easy to use.",
             "github": "https://github.com/karthikeyaspace/shortn",
             "techStack": ["TypeScript", "Tailwind CSS", "Node JS", "MongoDB"],
-            "tryout": ""
+            "tryout": "https://shortifyy.vercel.app"
         },
         {
             "name": "The Coder Companion",

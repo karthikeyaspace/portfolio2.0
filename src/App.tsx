@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Root from './Root'
+import Layout from './Layout'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Resume from './pages/Resume'
@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const routes = createBrowserRouter([
     {
       path: '/',
-      element: <Root />,
+      element: <Layout />,
       children: [
         {
           path: '/',

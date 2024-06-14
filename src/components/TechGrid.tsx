@@ -53,7 +53,7 @@ const TechGrid: React.FC = () => {
           <h1 className='text-3xl md:text-4xl'>Tech Stack</h1>
           <div className='w-full h-[1px] bg-secondary'></div>
       </div>
-      <div className='flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start'>
+      <div className='mt-8 flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start'>
         {
           technologies.map((tech, index) => {
             return (
