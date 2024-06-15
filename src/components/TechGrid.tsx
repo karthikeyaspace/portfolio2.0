@@ -49,9 +49,9 @@ const TechGrid: React.FC = () => {
 
   return (
     <div className='mt-16 w-full'>
-      <div className='flex flex-row items-end flex-wrap mb-4 gap-1' >
+      <div className='flex flex-col mb-4 gap-2' >
           <h1 className='text-3xl md:text-4xl'>Tech Stack</h1>
-          <div className='w-full h-[1px] bg-secondary'></div>
+          <div className='w-full h-[1px] bg-secondary/20'></div>
       </div>
       <div className='mt-8 flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start'>
         {

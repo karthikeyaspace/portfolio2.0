@@ -6,9 +6,9 @@ const Projects2: React.FC = () => {
     const homedata = Array.isArray(data.projects) ? data.projects.slice(0, 2) : [];
     return (
         <div className='w-full mt-16 flex flex-col '>
-            <div className='flex flex-row items-end flex-wrap gap-1' >
+            <div className='flex flex-col gap-2' >
                 <h1 className='text-3xl md:text-4xl'>Projects</h1>
-                <div className='w-full h-[1px] bg-secondary'></div>
+                <div className='w-full h-[1px] bg-secondary/20'></div>
             </div>
             <div className="mt-8 w-full transition-all duration-300  flex flex-row flex-wrap justify-between">
                 {

@@ -6,6 +6,7 @@ import TechGrid from '../components/TechGrid'
 import Github from '../components/Github'
 import { useOutletContext } from 'react-router-dom'
 import Projects2 from '../components/Projects2'
+import MailMe from '../components/MailMe'
 
 const Home: React.FC = () => {
   // landing
@@ -14,7 +15,6 @@ const Home: React.FC = () => {
   // grid - technologies
   // github contribs
   const { theme } = useOutletContext<{theme: string}>() 
-  console.log(theme, 'home')
   return (
     <div className='px-8 pb-20 md:px-0 md:max-w-[80%] lg:max-w-[50%] m-auto'>
       <Landing theme={theme} />
@@ -23,6 +23,7 @@ const Home: React.FC = () => {
       <TechGrid />
       <Projects2 />
       <Github theme={theme}/>
+      <MailMe />
     </div>
   )
 }

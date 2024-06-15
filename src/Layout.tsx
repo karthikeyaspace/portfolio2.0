@@ -20,7 +20,6 @@ const Root: React.FC = () => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  console.log(theme, 'root')
 
   const context: OutletContextValue = {
     theme,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { SiCplusplus } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
@@ -13,91 +13,95 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 
 const LangGrid: React.FC = () => {
-
   const languages = [
     {
       name: "C++",
-      icon: SiCplusplus ,
+      icon: SiCplusplus,
       color: "text-blue-500",
     },
     {
-      name: 'Python',
+      name: "Python",
       icon: FaPython,
       color: "text-yellow-500",
     },
     {
-      name: 'HTML',
+      name: "HTML",
       icon: FaHtml5,
       color: "text-red-500",
     },
     {
-      name: 'CSS',
-      icon: FaCss3Alt ,
+      name: "CSS",
+      icon: FaCss3Alt,
       color: "text-blue-500",
     },
     {
-      name: 'React',
-      icon: FaReact ,
+      name: "React",
+      icon: FaReact,
       color: "text-blue-500",
     },
     {
-      name: 'Git',
-      icon: FaGitAlt ,
+      name: "Git",
+      icon: FaGitAlt,
       color: "text-red-500",
     },
     {
-      name: 'SQL',
-      icon: TbSql ,
+      name: "SQL",
+      icon: TbSql,
       color: "text-blue-500",
     },
     {
-      name: 'JavaScript',
-      icon: IoLogoJavascript ,
+      name: "JavaScript",
+      icon: IoLogoJavascript,
       color: "text-yellow-500",
     },
     {
-      name: 'Node.js',
-      icon: FaNodeJs ,
+      name: "Node.js",
+      icon: FaNodeJs,
       color: "text-green-500",
     },
     {
-      name: 'TypeScript',
+      name: "TypeScript",
       icon: SiTypescript,
       color: "text-blue-500",
     },
     {
-      name: 'Tailwind CSS',
-      icon: RiTailwindCssFill ,
+      name: "Tailwind CSS",
+      icon: RiTailwindCssFill,
       color: "text-blue-500",
     },
     {
-      name: 'MongoDB',
-      icon: DiMongodb ,
+      name: "MongoDB",
+      icon: DiMongodb,
       color: "text-green-500",
-    }
-
-  ]
+    },
+  ];
 
   return (
-    <div className='mt-16 w-full'>
-      <div className='flex flex-row items-end flex-wrap mb-4 gap-1' >
-          <h1 className='text-3xl md:text-4xl'>Lang Stack</h1>
-          <div className='w-full h-[1px] bg-secondary'></div>
+    <div className="mt-16 w-full">
+      <div className="flex flex-col mb-4 gap-2">
+        <h1 className="text-3xl md:text-4xl">Lang Stack</h1>
+        <div className="w-full h-[1px] bg-secondary/20"></div>
       </div>
-      <div className='mt-8 flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start '>
-        {
-          languages.map((lang, index) => {
-            return (
-              <div key={index} className='group relative px-11 py-3 bg-blue-100 rounded-md flex flex-col items-center justify-center transition-all duration-300'>
-                <lang.icon size={50} className={`text-5xl ${lang.color} transition-opacity duration-300 group-hover:opacity-0`}/>
-                <p className='absolute opacity-0 text-black text-lg transition-opacity duration-300 group-hover:opacity-100'>{lang.name}</p>
-              </div>
-            )
-          })
-        }
+      <div className="mt-8 flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start ">
+        {languages.map((lang, index) => {
+          return (
+            <div
+              key={index}
+              className="group relative px-11 py-3 bg-blue-100 rounded-md flex flex-col items-center justify-center transition-all duration-300"
+            >
+              <lang.icon
+                size={50}
+                className={`text-5xl ${lang.color} transition-opacity duration-300 group-hover:opacity-0`}
+              />
+              <p className="absolute opacity-0 text-black text-lg transition-opacity duration-300 group-hover:opacity-100">
+                {lang.name}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LangGrid
+export default LangGrid;

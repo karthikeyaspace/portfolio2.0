@@ -9,7 +9,6 @@ const Landing: React.FC<{theme: string}> = ({theme}) => {
         return theme === 'light' ? 'img1' : 'img2'
     })
 
-    console.log(theme, 'asdf')
     useEffect(()=>{
         setImg(theme === 'light' ? 'img1' : 'img2')
     }, [theme])
@@ -43,9 +42,9 @@ const Landing: React.FC<{theme: string}> = ({theme}) => {
                     />
                 </div>
                 <p className='text-2xl z-10'>based in Hyderabad, India </p>
-                <h1 className='text-4xl mt-4 z-10'>and I <span className='text-orange-400 text-5xl'>Build</span> <span className='text-blue-600 text-6xl underline font-bold'>THINGS</span></h1>
+                <h1 className='text-4xl mt-4 z-10'>and I <span className='text-orange-400 text-5xl'>Build</span> <span className='text-6xl my-1 px-1 text-orange-600 font-bold'>THINGS</span></h1>
 
-                <Link to='projects' className='z-10'>
+                <Link to='projects' className='z-10 w-40'>
                     <button className='px-6 py-1 mt-4 text-lg bg-primary text-secondary border-2 border-secondary hover:bg-secondary hover:text-primary transition-all font-bold italic'>View Things</button>
                 </Link>
 

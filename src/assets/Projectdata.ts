@@ -2,9 +2,9 @@ const data = {
     "projects": [
         {
             "name": "Shortn",
-            "description": "Shortn is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and MongoDB. It has a interactive user-friendly interface and is easy to use.",
+            "description": "Shortn is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and Firebase/Firestore. It has a interactive user-friendly interface and is easy to use.",
             "github": "https://github.com/karthikeyaspace/shortn",
-            "techStack": ["TypeScript", "Tailwind CSS", "Node JS", "MongoDB"],
+            "techStack": ["TypeScript", "Tailwind CSS", "Node JS", "Firebase"],
             "tryout": "https://shortifyy.vercel.app"
         },
         {

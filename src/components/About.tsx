@@ -3,9 +3,9 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <div className="w-full ">
-      <div className="flex flex-row items-end flex-wrap">
-        <h1 className="text-3xl md:text-5xl">My.Self</h1>
-        <div className="w-full h-[1px] bg-secondary"></div>
+      <div className="flex flex-col gap-2">
+        <h1 className="text-3xl md:text-5xl ">My.Self</h1>
+        <div className="w-full h-[1px] bg-secondary/20"></div>
       </div>
       <div className="mt-8">
         <p className="text-lg md:text-2xl ">
