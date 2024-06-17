@@ -9,11 +9,6 @@ import Projects2 from '../components/Projects2'
 import MailMe from '../components/MailMe'
 
 const Home: React.FC = () => {
-  // landing
-  // about
-  // grid - langs
-  // grid - technologies
-  // github contribs
   const { theme } = useOutletContext<{theme: string}>() 
   return (
     <div className='px-8 pb-20 md:px-0 md:max-w-[80%] lg:max-w-[50%] m-auto'>
