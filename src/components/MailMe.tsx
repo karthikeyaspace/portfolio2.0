@@ -24,7 +24,7 @@ const MailMe: React.FC = () => {
       .post(posturl, mail)
       .then((res) => {
         setLoading(false);
-        if (res.data.message == "Mail recieved") {
+        if (res.data.message === "Mail recieved") {
           setMail({ name: "", email: "", message: "" });
           setStats({ message: "Mail sent successfully", type: "success" });
         } else {
