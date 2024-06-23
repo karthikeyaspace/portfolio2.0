@@ -23,13 +23,14 @@ const MailMe: React.FC = () => {
     axios
       .post(posturl, mail)
       .then((res) => {
-        setLoading(false);
-        if (res.data.message === "Mail recieved") {
+        console.log(res.data)
+        if (res.data.message === "Mail received") {
           setMail({ name: "", email: "", message: "" });
           setStats({ message: "Mail sent successfully", type: "success" });
         } else {
           setStats({ message: "Mail sending failed", type: "error" });
         }
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -83,7 +84,7 @@ const MailMe: React.FC = () => {
         />
         <button
           type="submit"
-          className="w-1/2 sm:w-1/4 mx-auto mt-4 py-3 border border-secondary text-secondary flex justify-center items-center active:bg-secondary active:border-primary active:text-primary"
+          className="w-40 sm:w-40 mx-auto mt-4 py-3 border border-secondary text-secondary flex justify-center items-center active:bg-secondary active:border-primary active:text-primary"
           disabled={loading}
         >
           {loading ? (
