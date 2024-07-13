@@ -6,7 +6,8 @@ import { FaDiscord } from "react-icons/fa";
 import { IoLogoVercel } from "react-icons/io5";
 import { SiPostman } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
-
+import { SiFirebase } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
 const TechGrid: React.FC = () => {
 
   const technologies = [
@@ -44,6 +45,16 @@ const TechGrid: React.FC = () => {
       name: "Github",
       icon: SiGithub,
       color: "text-black"
+    },
+    {
+      name: 'Firebase',
+      icon: SiFirebase,
+      color: 'text-yellow-500'
+    },
+    {
+      name: 'Supabase',
+      icon: SiSupabase,
+      color: 'text-green-600'
     }
   ]
 
