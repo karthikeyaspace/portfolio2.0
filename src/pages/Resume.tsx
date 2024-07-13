@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import pdf from "../assets/resume.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
