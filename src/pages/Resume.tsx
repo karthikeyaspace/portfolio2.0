@@ -28,11 +28,9 @@ const Resume: React.FC = () => {
 
   return (
     <div className="mt-10 md:mt-14 bg-primary  min-h-screen">
-      <div className="">
-        <Document file={pdf} className="pdf">
+        <Document file={pdf} className="pdf flex justify-center">
           <Page pageNumber={1} scale={scale} />
         </Document>
-      </div>
 
       <div className="text-center py-8 px-0 mt-6 sm:mt-0">
         <a href={pdf} download>

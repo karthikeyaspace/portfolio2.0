@@ -31,16 +31,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.annotationLayer{
-    display: none;
-}
-
 .react-pdf__Page{
     background-color: var(--primary) !important;
 }
 
 .react-pdf__Page__canvas{
-    margin: auto;
     border: 1px solid rgb(var(--secondary));
     box-shadow: 0 0 30px 0 rgba(var(--secondary), 0.6);
 }
