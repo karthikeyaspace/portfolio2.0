@@ -1,11 +1,32 @@
 const data = {
     "projects": [
         {
+            "name": "Transferit",
+            "description": "Transferit is a file sharing application that allows you to share files securely and anonymously with an option of setting password. It is build using Typescript, Tailwind css, Supabase, AWS S3. It has a user-friendly interface and is easy to use.",
+            "github": "https://github.com/karthikeyaspace/transferit",
+            "techStack": ["Typescript", "Tailwind css", "Supabase", "AWS S3"],
+            "tryout": "https://transferfile.vercel.app"
+        },
+        {
+            "name": "CodeWatch",
+            "description": "A coding platform built to conduct lab exams and coding contests. This app actively monitor tabs while on test and block the student if suspicious activity is detected. Teacher can get live stats of the test.",
+            "github": "https://github.com/karthikeyaspace/codewatch",
+            "techStack": ["Typescript", "Tailwind css", "Express", "MongoDB", "Judge0 API"],
+            "tryout": ""
+        },
+        {
             "name": "Shortn",
             "description": "Shortn is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and Firebase/Firestore. It has a interactive user-friendly interface and is easy to use.",
             "github": "https://github.com/karthikeyaspace/shortn",
-            "techStack": ["TypeScript", "Tailwind CSS", "Node JS", "Firebase"],
+            "techStack": ["TypeScript", "Tailwind css", "Node JS", "Firebase"],
             "tryout": "https://shortifyy.vercel.app"
+        },
+        {
+            "name": "College club website",
+            "description": "Designed, Developed and maintaining a website for college club showcasing about the club, events conducted, testimonials, team page etc. current deployed in vercel. Built using React JS, Tailwind CSS",
+            "github": "https://github.com/vjdataquesters/website",
+            "techStack": ["React JS", "Tailwind CSS", "Vercel"],
+            "tryout": "https://vjdataquesters.vercel.app"
         },
         {
             "name": "The Coder Companion",
