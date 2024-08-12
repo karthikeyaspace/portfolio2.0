@@ -28,14 +28,13 @@ const Resume: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-10 md:mt-14 bg-primary  min-h-screen">
-        <Document file={pdf} className="pdf flex justify-center">
-          <Page pageNumber={1} scale={scale} />
-        </Document>
-
-      <div className="text-center py-8 px-0 mt-6 sm:mt-0">
+    <div className="mt-10 md:mt-6 bg-primary  min-h-screen">
+      <Document file={pdf} className="pdf flex justify-center">
+        <Page pageNumber={1} scale={scale} />
+      </Document>
+      <div className="text-center mt-6 sm:mt-0">
         <a href={pdf} download>
-          <button className="px-6 py-3 bg-primary text-secondary italic font-bold border-2 border-secondary my-4  transition-all hover:bg-secondary hover:text-primary ">
+          <button className="px-2 py-1 bg-primary text-xs text-secondary/80 border border-secondary/30">
             Download Resume
           </button>
         </a>

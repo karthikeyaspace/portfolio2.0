@@ -1,45 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 .light {
-    /* --primary: 255,219,172; */
-    --primary: 245, 245, 245;
-    --secondary: 0, 0, 0;
+  /* --primary: 255,219,172; */
+  --primary: 245, 245, 245;
+  --secondary: 0, 0, 0;
 }
 
-.dark{
-    --primary: 0, 0, 0;
-    --secondary: 245, 245, 245;
+.dark {
+  --primary: 0, 0, 0;
+  --secondary: 245, 245, 245;
 }
-
 
 html {
-    font-family: 'Anta', sans-serif;
+  font-family: "Anta", sans-serif;
 }
-
 
 body::-webkit-scrollbar {
-   display: none;
+  display: none;
 }
 
-
-.textLayer{
-    display: none;
+.textLayer {
+  display: none;
 }
 
-.react-pdf__Page{
-    background-color: var(--primary) !important;
+.react-pdf__Page {
+  background-color: var(--primary) !important;
 }
 
-.react-pdf__Page__canvas{
-    border: 1px solid rgb(var(--secondary));
-    box-shadow: 0 0 30px 0 rgba(var(--secondary), 0.6);
+.react-pdf__Page__canvas {
+  border: 1px solid rgb(var(--secondary));
+  box-shadow: 0 0 30px 0 rgba(var(--secondary), 0.6);
 }
 
-.gthb  > article::-webkit-scrollbar {
-    display: none;
+.gthb > article::-webkit-scrollbar {
+  display: none;
 }

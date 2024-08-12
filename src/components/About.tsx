@@ -2,26 +2,26 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <div className="w-full ">
+    <div className="space-y-2">
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl md:text-5xl ">My.Self</h1>
+        <h1 className="text-3xl">About</h1>
         <div className="w-full h-[1px] bg-secondary/20"></div>
       </div>
-      <div className="mt-8">
-        <p className="text-lg md:text-2xl ">
-          Hey, I am Karthikeya, a Computer Science student from Hyderabad,
-          India. I am currently pursuing my 2nd year B-tech from VNRVJIET
-          engineering college in hyderabad. I am a Full Stack Developer and a
-          Machine Learning Enthusiast. I love to build things in public. I am
-          constantly seeking new opportunities to learn and grow and love
-          collaborative work and team environments. Apart from tech stuff, I
-          like to play basketball, read books, and watch movies.
+      <div className="space-y-2 text-secondary/80">
+        <p className="text-md">
+          A 3rd-year B-tech Computer Science student from Hyderabad, India, with
+          a passion for full-stack development and machine learning. I love to
+          build things in public and writing clean code. I have a habbit of
+          learning new tech by building projects with it. Constantly seeking new
+          opportunities to learn and grow, I thrive in collaborative work and
+          team environments. Beyond tech, I enjoy playing basketball, reading
+          books, and watching movies.
         </p>
-        <p className="text-lg mt-2">
+        <p>
           view my v1{" "}
           <a
             href="https://karthikeyaveruturi.vercel.app"
-            className="text-blue-600"
+            className="text-blue-600/70"
           >
             portfolio
           </a>{" "}

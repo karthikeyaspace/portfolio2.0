@@ -23,7 +23,7 @@ const MailMe: React.FC = () => {
     axios
       .post(posturl, mail)
       .then((res) => {
-        console.log(res.data)
+        console.log(res.data);
         if (res.data.message === "Mail received") {
           setMail({ name: "", email: "", message: "" });
           setStats({ message: "Mail sent successfully", type: "success" });
@@ -38,10 +38,10 @@ const MailMe: React.FC = () => {
   };
 
   return (
-    <div className="mt-12 w-full mb-16">
+    <div>
       <div className="flex flex-col items-start mb-4 gap-1">
-        <h1 className="text-3xl md:text-4xl">Contact Me</h1>
-        <p className="italic font-thin opacity-30">send me an email </p>
+        <h1 className="text-3xl">Contact Me</h1>
+        <p className="italic font-thin opacity-30 text-sm">send me an email </p>
         <div className="w-full h-[1px] bg-secondary/20"></div>
       </div>
 

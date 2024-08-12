@@ -1,0 +1,88 @@
+import React from "react";
+import { VscVscode } from "react-icons/vsc";
+import { DiGoogleCloudPlatform } from "react-icons/di";
+import { SiCanva } from "react-icons/si";
+import { FaDiscord } from "react-icons/fa";
+import { IoLogoVercel } from "react-icons/io5";
+import { SiPostman } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
+import { SiSupabase } from "react-icons/si";
+const TechGrid: React.FC = () => {
+  const technologies = [
+    {
+      name: "VS Code",
+      icon: VscVscode,
+      color: "text-blue-500",
+    },
+    {
+      name: "GCP",
+      icon: DiGoogleCloudPlatform,
+      color: "text-yellow-500",
+    },
+    {
+      name: "Canva",
+      icon: SiCanva,
+      color: "text-blue-600",
+    },
+    {
+      name: "Discord",
+      icon: FaDiscord,
+      color: "text-blue-500",
+    },
+    {
+      name: "Vercel",
+      icon: IoLogoVercel,
+      color: "text-black",
+    },
+    {
+      name: "Postman",
+      icon: SiPostman,
+      color: "text-orange-600",
+    },
+    {
+      name: "Github",
+      icon: SiGithub,
+      color: "text-black",
+    },
+    {
+      name: "Firebase",
+      icon: SiFirebase,
+      color: "text-yellow-500",
+    },
+    {
+      name: "Supabase",
+      icon: SiSupabase,
+      color: "text-green-600",
+    },
+  ];
+
+  return (
+    <div>
+      <div className="flex flex-col mb-4 gap-2">
+        <h1 className="text-3xl">Tool Stack</h1>
+        <div className="w-full h-[1px] bg-secondary/20"></div>
+      </div>
+      <div className="mt-8 flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start">
+        {technologies.map((tech, index) => {
+          return (
+            <div
+              key={index}
+              className="group relative px-10 py-2 bg-blue-100 rounded-md flex flex-col items-center justify-center transition-all duration-300 "
+            >
+              <tech.icon
+                size={50}
+                className={`text-5xl ${tech.color} transition-opacity duration-300 group-hover:opacity-0`}
+              />
+              <p className="absolute opacity-0 text-black text-lg transition-opacity duration-300 group-hover:opacity-100">
+                {tech.name}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default TechGrid;
