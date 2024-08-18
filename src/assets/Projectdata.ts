@@ -1,6 +1,13 @@
 const data = {
   projects: [
     {
+      name: "ResearchGpt",
+      description: "Research GPT is an AI-driven tool leveraging the Gemini AI API, offering detailed, elaborated explanations with seamless Supabase authentication and dynamic Framer Motion integration for enhanced user experiences.",
+      github: "https://github.com/karthikeyaspace/research-gpt",
+      techStack: ["TypeScript", "Supabase auth", "Tailwind", "Nodejs", "Gemini API", "Framer Motion"],
+      tryout: "https://researchgptai.vercel.app",
+    }, 
+    {
         name: "amailer",
         description: "a npm package build on top of nodemailer, mailgun, sendgrid to send emails easily. It has a user-friendly documentation and is easy to use. It can send emails in bulk mainly used for marketing purposes.",
         github: "https://github.com/karthikeyaspace/amailer",
@@ -30,11 +37,11 @@ const data = {
       tryout: "",
     },
     {
-      name: "Shortn",
+      name: "Shortifyy",
       description:
-        "Shortn is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and Firebase/Firestore. It has a interactive user-friendly interface and is easy to use.",
+        "Shortifyy is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and Supabase Postgress db. It has a interactive user-friendly interface and is easy to use.",
       github: "https://github.com/karthikeyaspace/shortn",
-      techStack: ["TypeScript", "Tailwind css", "Node JS", "Firebase"],
+      techStack: ["TypeScript", "Tailwind css", "Node JS", "Supabase"],
       tryout: "https://shortifyy.vercel.app",
     },
     {
@@ -58,8 +65,7 @@ const data = {
       description:
         "NextPad is a creative art sharing application built using reactjs, nodejs and mongodb. It allows users to share their creative pieces and lets the viewers write comments. It demonstrates tokenization using jwt for authentication.",
       github: "https://github.com/karthikeyaspace/NextPad",
-      techStack: ["React JS", "Nodejs", "Express", "MongoDB"],
-      tryout: "https://nextpad.vercel.app/",
+      techStack: ["React JS", "Nodejs", "Express", "MongoDB"]
     },
     {
       name: "FOCUS",

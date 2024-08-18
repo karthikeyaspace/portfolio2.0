@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Icon from "./Icon";
 import { TypeAnimation } from "react-type-animation";
 
 const Landing: React.FC<{ theme: string }> = ({ theme }) => {
@@ -11,6 +11,8 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
   useEffect(() => {
     setImg(theme === "light" ? "img1" : "img2");
   }, [theme]);
+
+  
 
   return (
     <div className="w-full mb-72 lg:mb-80">
@@ -57,18 +59,18 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
           <p className="italic text-pink-500 "></p>
         </Link>
 
-        <div className="flex flex-row gap-4 mt-6 z-10">
+        <div className="flex flex-row gap-5 mt-6 z-10">
           <a href="https://github.com/karthikeyaspace" target="_blank">
             {" "}
-            <FaGithub size={32} />{" "}
+            <Icon icon="github"/>
           </a>
           <a href="https://linkedin.com/in/karthikeyaveruturi" target="_blank">
             {" "}
-            <FaLinkedin size={32} />{" "}
+            <Icon icon='linkedin' size="26"/>
           </a>
           <a href="https://x.com/karthikeyaspace" target="_blank">
             {" "}
-            <FaTwitter size={32} />{" "}
+            <Icon icon='twitter'/>
           </a>
         </div>
         <div

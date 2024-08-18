@@ -1,7 +1,6 @@
 import React from "react";
 import data from "../assets/Projectdata";
-import { FaGithub } from "react-icons/fa";
-import { FaSquareArrowUpRight } from "react-icons/fa6";
+import Icon from "../components/Icon";
 
 const Projects: React.FC = () => {
   console.log(data);
@@ -18,12 +17,12 @@ const Projects: React.FC = () => {
               <div className="flex flex-row justify-center gap-2">
                 <a href={project.github} target="_blank">
                   {" "}
-                  <FaGithub size={24} />{" "}
+                  <Icon icon="projgithub"/>
                 </a>
                 {project.tryout && (
                   <a href={project.tryout} target="_blank">
                     {" "}
-                    <FaSquareArrowUpRight size={24} />{" "}
+                    <Icon icon="rightuparrow"/>
                   </a>
                 )}
               </div>

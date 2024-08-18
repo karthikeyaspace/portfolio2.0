@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 interface Mail {
   name: string;
@@ -88,7 +87,7 @@ const MailMe: React.FC = () => {
           disabled={loading}
         >
           {loading ? (
-            <AiOutlineLoading3Quarters className="animate-spin" size={24} />
+            <img src="../assets/tail-spin.svg" alt="" className="animate-spin"/>
           ) : (
             "Send"
           )}
