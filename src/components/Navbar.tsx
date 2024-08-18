@@ -8,6 +8,7 @@ const Navbar: React.FC<{
 }> = ({ theme, setTheme }) => {
   const location = useLocation();
   const path = location.pathname;
+  const darkTheme = theme === "dark";
 
   useEffect(() => {
     const page = navelements.find((element) => element.link === path);
@@ -18,20 +19,20 @@ const Navbar: React.FC<{
     {
       name: "Home",
       link: "/",
-      logo: 'home',
-      size: "20",
+      logo: "home",
+      size: "22",
     },
     {
       name: "Projects",
       link: "/projects",
-      logo: 'projects' ,
-      size: "20",
+      logo: "projects",
+      size: "18",
     },
     {
       name: "Resume",
       link: "/resume",
-      logo: 'resume',
-      size: "14",
+      logo: "resume",
+      size: "18",
     },
   ];
 
@@ -58,34 +59,38 @@ const Navbar: React.FC<{
           })}
           <div onClick={handleTheme} className="cursor-pointer pr-2 pl-1 ">
             {theme === "dark" ? (
-              <Icon icon='lightmode' fill="white" size="18"/>
+              <Icon icon="lightmode" fill="white" size="20" />
             ) : (
-              <Icon icon='darkmode' fill="black" size="18"/>
+              <Icon icon="darkmode" fill="black" size="20" />
             )}
           </div>
         </div>
       </div>
 
       <div className="fixed bottom-3 left-0 right-0 w-full md:hidden z-20 ">
-        <div className="h-full w-2/3 flex mx-auto rounded-full backdrop-blur-lg bg-secondary/10 items-center">
+        <div className="h-full w-64 flex mx-auto rounded-full backdrop-blur-lg bg-secondary/10 items-center">
           {navelements.map((element) => {
             const active =
-              path === element.link ? " text-pink-400" : " text-secondary";
+              path === element.link ? "#db2777" : darkTheme ? "white" : "black";
             return (
               <Link
                 to={element.link}
                 key={element.name}
-                className={`flex-1 px-6 py-3 duration-150 ${active}`}
+                className="px-6 py-3 duration-150"
               >
-                <Icon icon={element.logo as Icons} size={element.size}/>
+                <Icon
+                  icon={element.logo as Icons}
+                  size={element.size}
+                  fill={active}
+                />
               </Link>
             );
           })}
-          <div onClick={handleTheme} className="cursor-pointer flex-1 px-6">
+          <div onClick={handleTheme} className="cursor-pointer px-6">
             {theme === "dark" ? (
-              <Icon icon='lightmode' size="20"/>
+              <Icon icon="lightmode" size="28" fill="white" />
             ) : (
-              <Icon icon='darkmode' size="20"/>
+              <Icon icon="darkmode" size="28" fill="black" />
             )}
           </div>
         </div>
