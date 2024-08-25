@@ -20,19 +20,19 @@ const Navbar: React.FC<{
       name: "Home",
       link: "/",
       logo: "home",
-      size: "22",
+      size: 22,
     },
     {
       name: "Projects",
       link: "/projects",
       logo: "projects",
-      size: "18",
+      size: 18,
     },
     {
       name: "Resume",
       link: "/resume",
       logo: "resume",
-      size: "18",
+      size: 18,
     },
   ];
 
@@ -59,9 +59,9 @@ const Navbar: React.FC<{
           })}
           <div onClick={handleTheme} className="cursor-pointer pr-2 pl-1 ">
             {theme === "dark" ? (
-              <Icon icon="lightmode" fill="white" size="20" />
+              <Icon icon="lightmode" fill="white" size={20} />
             ) : (
-              <Icon icon="darkmode" fill="black" size="20" />
+              <Icon icon="darkmode" fill="black" size={20} />
             )}
           </div>
         </div>
@@ -88,9 +88,9 @@ const Navbar: React.FC<{
           })}
           <div onClick={handleTheme} className="cursor-pointer px-6">
             {theme === "dark" ? (
-              <Icon icon="lightmode" size="28" fill="white" />
+              <Icon icon="lightmode" size={28} fill="white" />
             ) : (
-              <Icon icon="darkmode" size="28" fill="black" />
+              <Icon icon="darkmode" size={28} fill="black" />
             )}
           </div>
         </div>

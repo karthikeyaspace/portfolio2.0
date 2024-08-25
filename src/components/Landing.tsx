@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Icon from "./Icon";
-import { color, motion, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 
 const Landing: React.FC<{ theme: string }> = ({ theme }) => {
   const roles = ["CS Student", "Full Stack Dev", "ML Enthusiast"];

@@ -83,7 +83,7 @@ const LangGrid: React.FC = () => {
               <Icon
                 icon={lang.icon as Icons}
                 fill={lang.color}
-                size="34"
+                size={34}
                 className="text-5xl transition-opacity 
                   duration-300 group-hover:opacity-0"
               />

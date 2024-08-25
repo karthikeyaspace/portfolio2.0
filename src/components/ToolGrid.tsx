@@ -70,7 +70,7 @@ const TechGrid: React.FC = () => {
             >
               <Icon
                 icon={tech.icon as Icons}
-                size="34"
+                size={34}
                 fill={tech.color}
                 className="text-5xl transition-opacity duration-300 group-hover:opacity-0"
               />
