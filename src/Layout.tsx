@@ -29,7 +29,7 @@ const Root: React.FC = () => {
     <div className={`${theme}`}>
       <Navbar theme={theme} setTheme={setTheme} />
       <ScrollToTop />
-      <div className="pt-20 min-h-screen bg-primary  text-secondary">
+      <div className="pt-10 bg-primary  text-secondary">
         <Outlet context={context} />
       </div>
       <Analytics />

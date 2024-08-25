@@ -9,13 +9,12 @@ const About: React.FC = () => {
       </div>
       <div className="space-y-2 text-secondary/80">
         <p className="text-md">
-          A 3rd-year B-tech Computer Science student from Hyderabad, India, with
+          A 3rd-year Computer Science student from Hyderabad, India, with
           a passion for full-stack development and machine learning. I love to
-          build things in public and writing clean code. I have a habbit of
-          learning new tech by building projects with it. Constantly seeking new
-          opportunities to learn and grow, I thrive in collaborative work and
-          team environments. Beyond tech, I enjoy playing basketball, reading
-          books, and watching movies.
+          build things in public and write clean code. I Learn new tech by building projects with it. 
+          Constantly seeking new opportunities to learn and grow, I thrive in collaborative work and
+          team environments. Beyond tech, I enjoy playing basketball, cricket, 
+          and watching movies.
         </p>
         <p>
           view my v1{" "}

@@ -1,14 +1,17 @@
 import React from "react";
 import data from "../assets/Projectdata";
 import Icon from "../components/Icon";
+import { useOutletContext } from "react-router-dom";
 
 const Projects: React.FC = () => {
-  console.log(data);
+  const { theme } = useOutletContext<{ theme: string }>();
+  const fillcolor = theme === "dark" ? "white" : "black";
+
   return (
-    <div className="w-full md:mt-6 px-6 pb-10 transition-all duration-300 flex flex-row flex-wrap justify-center gap-4">
+    <div className="w-full md:mt-6 px-6 md:pt-10 pb-10 transition-all duration-300 flex flex-row flex-wrap justify-center gap-4">
       {data.projects.map((project, index) => (
         <div
-          className="max-w-96 mb-12 rounded-md overflow-hidden border-[2px] border-secondary bg-primary text-secondary"
+          className="max-w-96 mb-12 rounded-md overflow-hidden border border-secondary/40 bg-primary text-secondary"
           key={index}
         >
           <div className="px-6 py-4">
@@ -17,12 +20,12 @@ const Projects: React.FC = () => {
               <div className="flex flex-row justify-center gap-2">
                 <a href={project.github} target="_blank">
                   {" "}
-                  <Icon icon="projgithub"/>
+                  <Icon icon="projgithub" fill={fillcolor} />
                 </a>
                 {project.tryout && (
                   <a href={project.tryout} target="_blank">
                     {" "}
-                    <Icon icon="rightuparrow"/>
+                    <Icon icon="rightuparrow" fill={fillcolor} />
                   </a>
                 )}
               </div>

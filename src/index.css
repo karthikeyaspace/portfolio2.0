@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +15,10 @@
 }
 
 html {
-  font-family: "Anta", sans-serif;
+  font-family: "Sora", sans-serif ;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style:normal;
 }
 
 body::-webkit-scrollbar {

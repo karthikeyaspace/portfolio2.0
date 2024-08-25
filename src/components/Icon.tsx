@@ -36,7 +36,7 @@ export type Icons =
 interface IconProps {
   icon: Icons;
   fill?: string;
-  size?: string;
+  size?: number;
   className?: string;
 }
 
