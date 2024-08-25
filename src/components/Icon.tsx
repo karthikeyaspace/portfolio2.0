@@ -31,7 +31,8 @@ export type Icons =
   | "firebase"
   | "supabase"
   | "rightuparrow"
-  | "projgithub";
+  | "projgithub"
+  | "tailspin";
 
 interface IconProps {
   icon: Icons;

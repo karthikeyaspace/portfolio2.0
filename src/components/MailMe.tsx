@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Icon from "./Icon";
 
 interface Mail {
   name: string;
@@ -7,7 +8,7 @@ interface Mail {
   message: string;
 }
 
-const MailMe: React.FC = () => {
+const MailMe: React.FC<{ theme: string }> = ({ theme }) => {
   const [mail, setMail] = useState<Mail>({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState<boolean>(false);
   const [stats, setStats] = useState<{ message: string; type: string }>({
@@ -35,7 +36,6 @@ const MailMe: React.FC = () => {
         console.log(err);
       });
   };
-
   return (
     <div>
       <div className="flex flex-col items-start mb-4 gap-1">
@@ -49,7 +49,7 @@ const MailMe: React.FC = () => {
         className="w-full sm:w-10/12 flex flex-col gap-2 mx-auto "
       >
         <p
-          className={`text-left text-sm text-secondary italic  ${
+          className={`text-left text-sm italic  ${
             stats.type === "success" ? "text-green-700" : "text-red-600"
           }`}
         >
@@ -83,11 +83,16 @@ const MailMe: React.FC = () => {
         />
         <button
           type="submit"
-          className="w-40 sm:w-40 mx-auto mt-4 py-3 border border-secondary text-secondary flex justify-center items-center active:bg-secondary active:border-primary active:text-primary"
+          className="w-40 h-10 sm:w-40 mx-auto mt-4 py-3 border border-secondary text-secondary flex justify-center items-center"
           disabled={loading}
         >
           {loading ? (
-            <img src="../assets/tail-spin.svg" alt="" className="animate-spin"/>
+            <Icon
+              icon="tailspin"
+              className="animate-spin"
+              fill={theme === "dark" ? "white" : "black"}
+              size={20}
+            />
           ) : (
             "Send"
           )}

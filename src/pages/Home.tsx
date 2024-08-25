@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <Github theme={theme} />
       </Reveal>
       <Reveal>
-        <MailMe />
+        <MailMe theme={theme}/>
       </Reveal>
     </div>
   );
