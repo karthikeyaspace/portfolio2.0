@@ -33,9 +33,9 @@ const Resume: React.FC = () => {
         <Page pageNumber={1} scale={scale} />
       </Document>
       <div className="text-center mt-6 sm:mt-0">
-        <a href={pdf} download>
+        <a href={"https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9/view?usp=sharing"} target="_blank">
           <button className="px-2 py-1 my-10 bg-primary text-xs text-secondary/80 border border-secondary/30">
-            Download Resume
+            View in drive
           </button>
         </a>
       </div>
