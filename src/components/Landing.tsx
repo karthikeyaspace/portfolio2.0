@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Icon from "./Icon";
 import { motion, useAnimationControls } from "framer-motion";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Landing: React.FC<{ theme: string }> = ({ theme }) => {
   const roles = ["CS Student", "Full Stack Dev", "ML Enthusiast"];
@@ -103,7 +104,7 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
             rel="noopener noreferrer"
             className="transform hover:scale-110 transition-transform duration-200"
           >
-            <Icon icon="github" size={32} fill={iconfill} />
+            <SiGithub size={32} fill={iconfill} />
           </a>
           <a
             href="https://linkedin.com/in/karthikeyaveruturi"
@@ -111,7 +112,7 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
             rel="noopener noreferrer"
             className="transform hover:scale-110 transition-transform duration-200"
           >
-            <Icon icon="linkedin" size={32} fill={iconfill} />
+            <SiLinkedin size={32} fill={iconfill} />
           </a>
           <a
             href="https://x.com/karthikeyaspace"
@@ -119,7 +120,7 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
             rel="noopener noreferrer"
             className="transform hover:scale-110 transition-transform duration-200"
           >
-            <Icon icon="twitter" size={32} fill={iconfill} />
+            <FaXTwitter size={32} fill={iconfill} />
           </a>
         </motion.div>
       </div>

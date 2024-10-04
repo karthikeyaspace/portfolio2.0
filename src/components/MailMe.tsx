@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Icon from "./Icon";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 interface Mail {
   name: string;
@@ -87,8 +87,7 @@ const MailMe: React.FC<{ theme: string }> = ({ theme }) => {
           disabled={loading}
         >
           {loading ? (
-            <Icon
-              icon="tailspin"
+            <AiOutlineLoading3Quarters  
               className="animate-spin"
               fill={theme === "dark" ? "white" : "black"}
               size={20}

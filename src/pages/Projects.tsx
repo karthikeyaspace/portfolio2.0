@@ -1,7 +1,8 @@
 import React from "react";
 import data from "../assets/Projectdata";
-import Icon from "../components/Icon";
 import { useOutletContext } from "react-router-dom";
+import { SiGithub } from "react-icons/si";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Projects: React.FC = () => {
   const { theme } = useOutletContext<{ theme: string }>();
@@ -20,12 +21,12 @@ const Projects: React.FC = () => {
               <div className="flex flex-row justify-center gap-2">
                 <a href={project.github} target="_blank">
                   {" "}
-                  <Icon icon="projgithub" fill={fillcolor} />
+                  <SiGithub fill={fillcolor} size={18}/>
                 </a>
                 {project.tryout && (
                   <a href={project.tryout} target="_blank">
                     {" "}
-                    <Icon icon="rightuparrow" fill={fillcolor} />
+                    <FaLocationArrow  fill={fillcolor} size={18}/>
                   </a>
                 )}
               </div>

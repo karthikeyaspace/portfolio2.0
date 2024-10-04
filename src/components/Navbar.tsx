@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
+import { FaBook } from "react-icons/fa6";
+import { IoHomeSharp } from "react-icons/io5";
+import { LuFileSpreadsheet } from "react-icons/lu";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
-import Icon, { Icons } from "./Icon";
 
 const Navbar: React.FC<{
   theme: string;
@@ -19,20 +22,17 @@ const Navbar: React.FC<{
     {
       name: "Home",
       link: "/",
-      logo: "home",
-      size: 22,
+      logo: IoHomeSharp,
     },
     {
       name: "Projects",
       link: "/projects",
-      logo: "projects",
-      size: 18,
+      logo: FaBook,
     },
     {
       name: "Resume",
       link: "/resume",
-      logo: "resume",
-      size: 18,
+      logo: LuFileSpreadsheet,
     },
   ];
 
@@ -59,9 +59,9 @@ const Navbar: React.FC<{
           })}
           <div onClick={handleTheme} className="cursor-pointer pr-2 pl-1 ">
             {theme === "dark" ? (
-              <Icon icon="lightmode" fill="white" size={20} />
+              <MdLightMode fill="white" size={20} />
             ) : (
-              <Icon icon="darkmode" fill="black" size={20} />
+              <MdDarkMode fill="black" size={20} />
             )}
           </div>
         </div>
@@ -78,19 +78,15 @@ const Navbar: React.FC<{
                 key={element.name}
                 className="px-6 py-3 duration-150"
               >
-                <Icon
-                  icon={element.logo as Icons}
-                  size={element.size}
-                  fill={active}
-                />
+                <element.logo size={18} fill={active} />
               </Link>
             );
           })}
           <div onClick={handleTheme} className="cursor-pointer px-6">
             {theme === "dark" ? (
-              <Icon icon="lightmode" size={28} fill="white" />
+              <MdLightMode size={18} fill="white" />
             ) : (
-              <Icon icon="darkmode" size={28} fill="black" />
+              <MdDarkMode size={18} fill="black" />
             )}
           </div>
         </div>

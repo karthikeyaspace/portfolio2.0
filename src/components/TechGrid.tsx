@@ -1,70 +1,94 @@
 import React from "react";
-import Icon, { Icons } from "./Icon";
+import {
+  FaCss3,
+  FaGitAlt,
+  FaHtml5,
+  FaNode,
+  FaPython,
+  FaReact,
+} from "react-icons/fa6";
+import { PiFileSqlBold } from "react-icons/pi";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiCplusplus, SiMongodb, SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const LangGrid: React.FC = () => {
   const languages = [
     {
       name: "C++",
-      icon: "cpp",
+      icon: SiCplusplus,
       color: "#3B82F6", // blue-500
     },
     {
       name: "Python",
-      icon: "python",
+      icon: FaPython,
       color: "#F59E0B", // yellow-500
     },
     {
       name: "HTML",
-      icon: "html",
+      icon: FaHtml5,
       color: "#EF4444", // red-500
     },
     {
       name: "CSS",
-      icon: "css",
+      icon: FaCss3,
       color: "#3B82F6", // blue-500
     },
     {
       name: "React",
-      icon: "react",
+      icon: FaReact,
       color: "#3B82F6", // blue-500
     },
     {
       name: "Git",
-      icon: "git",
+      icon: FaGitAlt,
       color: "#EF4444", // red-500
     },
     {
       name: "SQL",
-      icon: "sql",
+      icon: PiFileSqlBold,
       color: "#3B82F6", // blue-500
     },
     {
       name: "JavaScript",
-      icon: "js",
+      icon: IoLogoJavascript,
       color: "#f7e025", // yellow-500
     },
     {
       name: "Node.js",
-      icon: "node",
+      icon: FaNode,
       color: "#10B981", // green-500
     },
     {
       name: "TypeScript",
-      icon: "typescript",
+      icon: SiTypescript,
       color: "#3B82F6", // blue-500
     },
     {
       name: "Tailwind CSS",
-      icon: "tailwind",
+      icon: SiTailwindcss,
       color: "#3B82F6", // blue-500
     },
     {
       name: "MongoDB",
-      icon: "mongodb",
+      icon: SiMongodb,
       color: "#10B981", // green-500
     },
+    {
+      name: "NextJs",
+      icon: SiNextdotjs,
+    },
+    {
+      name: "Postgres",
+      icon: BiLogoPostgresql,
+      color: "#3B82F6", // blue-500
+    },
+    {
+      name: "Prisma ORM",
+      icon: SiPrisma,
+      color: "#000000", // blue-500
+    }
   ];
-  
 
   return (
     <div>
@@ -80,8 +104,7 @@ const LangGrid: React.FC = () => {
               className="group h-14 relative px-10 py-2 bg-blue-100 rounded-md flex 
               flex-col items-center justify-center transition-all duration-300"
             >
-              <Icon
-                icon={lang.icon as Icons}
+              <lang.icon
                 fill={lang.color}
                 size={34}
                 className="text-5xl transition-opacity 
