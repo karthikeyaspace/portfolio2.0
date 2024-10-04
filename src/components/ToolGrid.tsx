@@ -1,10 +1,8 @@
 import React from "react";
-import Icon, { Icons } from "./Icon";
 import {
   SiCanva,
   SiDiscord,
   SiDocker,
-  SiFirebase,
   SiFramer,
   SiGithub,
   SiGooglecloud,
@@ -15,7 +13,6 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
-import { TbBrandOauth } from "react-icons/tb";
 
 const TechGrid: React.FC = () => {
   const technologies = [
