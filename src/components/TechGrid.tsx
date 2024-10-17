@@ -91,7 +91,7 @@ const LangGrid: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className="md:max-w-[80%] lg:max-w-[50%]  mx-auto">
       <div className="flex flex-col mb-4 gap-2">
         <h1 className="text-3xl">Tech Stack</h1>
         <div className="w-full h-[1px] bg-secondary/20"></div>

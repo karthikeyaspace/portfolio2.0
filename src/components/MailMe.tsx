@@ -37,7 +37,7 @@ const MailMe: React.FC<{ theme: string }> = ({ theme }) => {
       });
   };
   return (
-    <div>
+    <div className="md:max-w-[80%] lg:max-w-[50%] mx-auto">
       <div className="flex flex-col items-start mb-4 gap-1">
         <h1 className="text-3xl">Contact Me</h1>
         <p className="italic font-thin opacity-30 text-sm">send me an email </p>

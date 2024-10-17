@@ -7,7 +7,7 @@ const Projects2: React.FC = () => {
     ? data.projects.slice(0, 2)
     : [];
   return (
-    <div className="w-full mt-16 flex flex-col ">
+    <div className="w-full mt-16 flex flex-col md:max-w-[80%] lg:max-w-[50%] mx-auto">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl md:text-4xl">Projects</h1>
         <div className="w-full h-[1px] bg-secondary/20"></div>
