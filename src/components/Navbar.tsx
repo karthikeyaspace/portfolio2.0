@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FaBook } from "react-icons/fa6";
 import { IoHomeSharp } from "react-icons/io5";
 import { LuFileSpreadsheet } from "react-icons/lu";
@@ -12,11 +12,6 @@ const Navbar: React.FC<{
   const location = useLocation();
   const path = location.pathname;
   const darkTheme = theme === "dark";
-
-  useEffect(() => {
-    const page = navelements.find((element) => element.link === path);
-    document.title = `Karthikeya | ${page?.name}`;
-  }, [path]);
 
   const navelements = [
     {

@@ -21,12 +21,12 @@ const Projects: React.FC = () => {
               <div className="flex flex-row justify-center gap-2">
                 <a href={project.github} target="_blank">
                   {" "}
-                  <SiGithub fill={fillcolor} size={18}/>
+                  <SiGithub fill={fillcolor} size={18} />
                 </a>
                 {project.tryout && (
                   <a href={project.tryout} target="_blank">
                     {" "}
-                    <FaLocationArrow  fill={fillcolor} size={18}/>
+                    <FaLocationArrow fill={fillcolor} size={18} />
                   </a>
                 )}
               </div>
