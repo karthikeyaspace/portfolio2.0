@@ -2,6 +2,7 @@ import React from "react";
 import {
   FaCss3,
   FaGitAlt,
+  FaGolang,
   FaHtml5,
   FaNode,
   FaPython,
@@ -9,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import { PiFileSqlBold } from "react-icons/pi";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiCplusplus, SiMongodb, SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiCplusplus, SiFastapi, SiMongodb, SiNextdotjs, SiPrisma, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 const LangGrid: React.FC = () => {
@@ -17,62 +18,62 @@ const LangGrid: React.FC = () => {
     {
       name: "C++",
       icon: SiCplusplus,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "Python",
       icon: FaPython,
-      color: "#F59E0B", // yellow-500
+      color: "#F59E0B", 
     },
     {
       name: "HTML",
       icon: FaHtml5,
-      color: "#EF4444", // red-500
+      color: "#EF4444", 
     },
     {
       name: "CSS",
       icon: FaCss3,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "React",
       icon: FaReact,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "Git",
       icon: FaGitAlt,
-      color: "#EF4444", // red-500
+      color: "#EF4444", 
     },
     {
       name: "SQL",
       icon: PiFileSqlBold,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "JavaScript",
       icon: IoLogoJavascript,
-      color: "#f7e025", // yellow-500
+      color: "#f7e025", 
     },
     {
       name: "Node.js",
       icon: FaNode,
-      color: "#10B981", // green-500
+      color: "#10B981", 
     },
     {
       name: "TypeScript",
       icon: SiTypescript,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "Tailwind CSS",
       icon: SiTailwindcss,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "MongoDB",
       icon: SiMongodb,
-      color: "#10B981", // green-500
+      color: "#10B981", 
     },
     {
       name: "NextJs",
@@ -81,13 +82,23 @@ const LangGrid: React.FC = () => {
     {
       name: "Postgres",
       icon: BiLogoPostgresql,
-      color: "#3B82F6", // blue-500
+      color: "#3B82F6", 
     },
     {
       name: "Prisma ORM",
       icon: SiPrisma,
-      color: "#000000", // blue-500
-    }
+      color: "#000000", 
+    },
+    {
+      name: "Fastapi",
+      icon: SiFastapi,
+      color: "#009485"
+    },
+    {
+      name: "Golang",
+      icon: FaGolang,
+      color: "#00ADD8"
+    },
   ];
 
   return (

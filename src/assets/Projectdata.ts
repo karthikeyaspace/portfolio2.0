@@ -1,6 +1,35 @@
 const data = {
   projects: [
     {
+      name: "Task Manager",
+      description:
+        "A task manager app that helps you to manage your tasks efficiently. It is build using Golang, Postgres, Reactjs, Tailwind. It features task create, delete, edit and mark as completed.",
+      github: "https://github.com/karthikeyaspace/task-manager",
+      techStack: [
+        "Golang",
+        "React JS",
+        "Postgres",
+        "Tailwind",
+        "Docker",
+      ],
+      tryout: "",
+    },
+    {
+      name: "Embeddable",
+      description:
+        "A platform to create and embed chatbot for your business or personal website. It is built using Reactjs, Fastapi, Python, Postgres, and Tailwind CSS. Featuring custom user authentication and authorization using jwt.",
+      github: "https://github.com/karthikeyaspace/embeddable",
+      techStack: [
+        "React JS",
+        "TypeScript",
+        "Fastapi",
+        "Python",
+        "Postgres",
+        "Tailwind",
+      ],
+      tryout: "",
+    },
+    {
       name: "PhotolicAI",
       description:
         "AI-powered photorealistic image generator that uses the FLUX-schenell model via Replicate API, enabling users to create stunning images with seamless integration of Next.js, Prisma-Postgres, and Google OAuth.",

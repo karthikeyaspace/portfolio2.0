@@ -19,63 +19,58 @@ const TechGrid: React.FC = () => {
     {
       name: "VS Code",
       icon: SiVisualstudiocode,
-      color: "#007ACC", // blue-500
-    },
-    {
-      name: "GCP",
-      icon: SiGooglecloud,
-      color: "#F9AB00", // yellow-500
-    },
-    {
-      name: "Canva",
-      icon: SiCanva,
-      color: "#006CFF", // blue-600
+      color: "#007ACC", 
     },
     {
       name: "Discord",
       icon: SiDiscord,
-      color: "#5865F2", // blue-500
+      color: "#5865F2", 
     },
     {
       name: "Vercel",
       icon: SiVercel,
-      color: "#000000", // black
+      color: "#000000", 
+    },
+    {
+      name: "GCP",
+      icon: SiGooglecloud,
+      color: "#F9AB00", 
     },
     {
       name: "Postman",
       icon: SiPostman,
-      color: "#FF6C37", // orange-600
+      color: "#FF6C37", 
     },
     {
       name: "Github",
       icon: SiGithub,
-      color: "#000000", // black
+      color: "#000000", 
     },
     {
       name: "Framer",
       icon: SiFramer,
-      color: "#000000", // blue-600
+      color: "#000000", 
     },
     {
       name: "Firebase",
       icon: IoLogoFirebase,
-      color: "#de3308", // yellow-500
+      color: "#de3308", 
     },
     {
       name: "Supabase",
       icon: SiSupabase,
-      color: "#3ECF8E", // green-600
+      color: "#3ECF8E", 
     },
     {
       name: "Docker",
       icon: SiDocker,
-      color: "#0db7ed", // blue-500
+      color: "#0db7ed", 
     },
     {
       name: "Notion",
       icon: SiNotion,
-      color: "#000000", // black
-    }
+      color: "#000000", 
+    },
   ];
 
   return (
