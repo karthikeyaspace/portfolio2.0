@@ -5,6 +5,7 @@ import {
   Route,
   Outlet,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollTop";
@@ -12,6 +13,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
+import Redirect from "./components/Redirect";
 
 interface OutletContextValue {
   theme: string;
@@ -64,6 +66,9 @@ const App: React.FC = () => {
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
           <Route path="r" element={<Resume />} />
+          <Route path="g" element={<Redirect site="g" />} />
+          <Route path="l" element={<Redirect site="l" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </Router>
