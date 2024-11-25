@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../assets/Projectdata";
+import data from "../assets/projects";
 import { Link } from "react-router-dom";
 
 const Projects2: React.FC = () => {

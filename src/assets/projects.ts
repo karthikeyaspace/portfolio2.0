@@ -1,17 +1,35 @@
 const data = {
   projects: [
     {
+      name: "ColdMailerGo",
+      description:
+        "Automates email communication by reading structured data from an Excel file, generating personalized email content using AI, and sending emails via an SMTP client. Includes config management, and AI integration, smtp client and efficient error handling.",
+      github: "https://github.com/karthikeyaspace/cold",
+      techStack: ["Golang", "Gemini", "SMTP"],
+      tryout: "",
+    },
+    {
+      name: "gorun",
+      description:
+        "Gorun is a lightweight command-line tool built with Go that simplifies managing multiple services for full-stack projects. Using a gorun.yaml configuration file, it allows users to define and execute commands for frontend, backend, databases, and more with a single terminal command.",
+      github: "https://github.com/karthikeyaspace/gorun",
+      techStack: ["Golang"],
+      tryout: "",
+    },
+    {
+      name: "CloudPreview",
+      description:
+        "A user-friendly service for instantly hosting static HTML files. Users can upload their HTML and CSS files to S3, generate a unique link, and view their site at any time.",
+      github: "https://github.com/karthikeyaspace/cdn-go",
+      techStack: ["Golang", "AWS S3"],
+      tryout: "",
+    },
+    {
       name: "Task Manager",
       description:
         "A task manager app that helps you to manage your tasks efficiently. It is build using Golang, Postgres, Reactjs, Tailwind. It features task create, delete, edit and mark as completed.",
       github: "https://github.com/karthikeyaspace/task-manager",
-      techStack: [
-        "Golang",
-        "React JS",
-        "Postgres",
-        "Tailwind",
-        "Docker",
-      ],
+      techStack: ["Golang", "React JS", "Postgres", "Tailwind", "Docker"],
       tryout: "",
     },
     {

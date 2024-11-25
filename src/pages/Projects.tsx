@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../assets/Projectdata";
+import data from "../assets/projects";
 import { useOutletContext } from "react-router-dom";
 import { SiGithub } from "react-icons/si";
 import { FaLocationArrow } from "react-icons/fa6";
