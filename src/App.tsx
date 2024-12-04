@@ -5,7 +5,6 @@ import {
   Route,
   Outlet,
   useLocation,
-  Navigate,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollTop";
@@ -65,10 +64,10 @@ const App: React.FC = () => {
           <Route index element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
-          <Route path="r" element={<Resume />} />
           <Route path="g" element={<Redirect site="g" />} />
           <Route path="l" element={<Redirect site="l" />} />
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="r" element={<Redirect site="r" />} />
+          <Route path="*" element={<Redirect site="*" />} />
         </Route>
       </Routes>
     </Router>
