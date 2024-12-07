@@ -1,4 +1,5 @@
 const links = {
+    api: "https://api.itskv.me/kv/mail",
     github: "https://github.com/karthikeyaspace",
     linkedin: "https://www.linkedin.com/in/karthikeyaveruturi",
     email: "karthikeyaveruturi2004@gmail.com",

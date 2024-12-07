@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import links from "../assets/constants";
 
 interface Mail {
   name: string;
@@ -16,26 +17,24 @@ const MailMe: React.FC<{ theme: string }> = ({ theme }) => {
     type: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const posturl = "https://kv3b.vercel.app/kv3/mailme";
     setLoading(true);
-    axios
-      .post(posturl, mail)
-      .then((res) => {
-        console.log(res.data);
-        if (res.data.message === "Mail received") {
-          setMail({ name: "", email: "", message: "" });
-          setStats({ message: "Mail sent successfully", type: "success" });
-        } else {
-          setStats({ message: "Mail sending failed", type: "error" });
-        }
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    try {
+      const res = await axios.post(links.api, mail);
+      if (res.data.success) {
+        setMail({ name: "", email: "", message: "" });
+        setStats({ message: res.data.message, type: "success" });
+      } else {
+        setStats({ message: res.data.message, type: "error" });
+      }
+    } catch (error) {
+      setStats({ message: "An error occured", type: "error" });
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <div className="md:max-w-[80%] lg:max-w-[50%] mx-auto">
       <div className="flex flex-col items-start mb-4 gap-1">
@@ -87,7 +86,7 @@ const MailMe: React.FC<{ theme: string }> = ({ theme }) => {
           disabled={loading}
         >
           {loading ? (
-            <AiOutlineLoading3Quarters  
+            <AiOutlineLoading3Quarters
               className="animate-spin"
               fill={theme === "dark" ? "white" : "black"}
               size={20}
