@@ -43,7 +43,7 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Hey, I'm {" "}
+          Hey, I'm{" "}
           <span className="text-6xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
             Karthikeya
           </span>
@@ -125,7 +125,6 @@ const Landing: React.FC<{ theme: string }> = ({ theme }) => {
           </a>
         </motion.div>
       </div>
-
 
       <motion.div
         initial={{ opacity: 0 }}
