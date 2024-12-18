@@ -27,11 +27,12 @@ import {
   SiSupabase,
   SiVercel,
   SiVisualstudiocode,
+  SiAmazonwebservices,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
 
-const languages = [
+const techs = [
   {
     name: "C++",
     icon: SiCplusplus,
@@ -118,7 +119,7 @@ const languages = [
   },
 ];
 
-const technologies = [
+const tools = [
   {
     name: "VS Code",
     icon: SiVisualstudiocode,
@@ -174,6 +175,12 @@ const technologies = [
     icon: SiNotion,
     color: "#000000",
   },
+  {
+    name: "AWS",
+    icon: SiAmazonwebservices,
+    color: "#FF9900",
+  },
+  
 ];
 
 const links = {
@@ -185,4 +192,4 @@ const links = {
     "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9/view?usp=sharing",
 };
 
-export { languages, links, technologies };
+export { techs, links, tools };

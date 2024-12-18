@@ -3,7 +3,7 @@ import Landing from "../components/Landing";
 import { Link, useOutletContext } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import { BiHeart } from "react-icons/bi";
-import { languages, links, technologies } from "../assets/constants";
+import { techs, links, tools } from "../assets/constants";
 import { projects } from "../assets/projects";
 import GitHubCalendar from "react-github-calendar";
 import axios from "axios";
@@ -45,15 +45,15 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="space-y-14 md:px-0 m-auto">
+    <div className="space-y-14 mx-auto flex flex-col items-center px-4 md:px-0">
       <Landing theme={theme} />
 
-      <Reveal>
-        <div className="space-y-2 md:max-w-[80%] lg:max-w-[50%] mx-auto">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-3xl">About</h1>
-            <div className="w-full h-[1px] bg-secondary/20"></div>
-          </div>
+      {/* About */}
+
+      <div className="max-w-3xl">
+        <Reveal>
+          <h1 className="text-3xl mb-2">About</h1>
+          <div className="h-[1px] bg-secondary/30 mb-4"></div>
           <div className="space-y-2 text-secondary/80">
             <p className="text-md">
               A 3rd-year Computer Science student from Hyderabad, India, with a
@@ -71,150 +71,140 @@ const Home: React.FC = () => {
               peek at my resume
             </Link>
           </div>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
 
-      <Reveal>
-        <div className="md:max-w-[80%] lg:max-w-[50%]  mx-auto">
-          <div className="flex flex-col mb-4 gap-2">
-            <h1 className="text-3xl">Tech Stack</h1>
-            <div className="w-full h-[1px] bg-secondary/20"></div>
-          </div>
-          <div className="flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start ">
-            {languages.map((lang, index) => {
-              return (
-                <div
-                  key={index}
-                  className="group h-14 relative px-10 py-2 bg-blue-100 rounded-md flex 
-              flex-col items-center justify-center transition-all duration-300"
-                >
-                  <lang.icon
-                    fill={lang.color}
-                    size={34}
-                    className="text-5xl transition-opacity 
-                  duration-300 group-hover:opacity-0"
-                  />
-                  <p
-                    className="absolute opacity-0 text-black text-lg 
-              transition-opacity duration-300 group-hover:opacity-100"
-                  >
-                    {lang.name}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </Reveal>
+      {/* Tech Stack */}
 
-      <Reveal>
-        <div className="md:max-w-[80%] lg:max-w-[50%] mx-auto">
-          <div className="flex flex-col mb-4 gap-2">
-            <h1 className="text-3xl">Tool Stack</h1>
-            <div className="w-full h-[1px] bg-secondary/20"></div>
-          </div>
-          <div className="mt-8 flex flex-row flex-wrap gap-4 items-center justify-center md:justify-start">
-            {technologies.map((tech, index) => {
-              return (
-                <div
-                  key={index}
-                  className="group h-14 relative px-10 py-2 bg-blue-100 rounded-md flex flex-col items-center justify-center transition-all duration-300 "
-                >
-                  <tech.icon
-                    size={34}
-                    fill={tech.color}
-                    className="text-5xl transition-opacity duration-300 group-hover:opacity-0"
-                  />
-                  <p className="absolute opacity-0 text-black text-lg transition-opacity duration-300 group-hover:opacity-100">
-                    {tech.name}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal>
-        <div className="w-full mt-16 flex flex-col md:max-w-[80%] lg:max-w-[50%] mx-auto">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-3xl">My Recent Projects</h1>
-            <div className="w-full h-[1px] bg-secondary/20"></div>
-          </div>
-          <div className="mt-8 w-full transition-all duration-300  flex flex-row flex-wrap justify-between">
-            {homedata.map((project, index) => (
+      <div className="max-w-3xl">
+        <Reveal>
+          <h1 className="text-3xl mb-2">Tech stack</h1>
+          <div className="h-[1px] bg-secondary/20 mb-4"></div>
+          <div className="flex flex-row flex-wrap gap-3 items-center justify-center md:justify-start">
+            {techs.map((tech, index) => (
               <div
-                className=" mb-6 rounded-md overflow-hidden border-[1px] border-secondary bg-primary text-secondary"
                 key={index}
+                className="group h-14 relative px-10 py-2 bg-blue-100 rounded-sm flex flex-col items-center justify-center transition-all duration-300 cursor-crosshair"
               >
-                <div className="p-4">
-                  <a href={project.github}>
-                    <h3 className="text-xl mb-2">{project.name}</h3>
-                  </a>
-                  <p className="text-base text-secondary/80">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="px-4 py-2">
-                  {project.tech?.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="mr-2 mb-2 px-3 py-1 text-sm text-gray-700 inline-block bg-gray-200 rounded-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <tech.icon
+                  fill={tech.color}
+                  size={34}
+                  className="text-5xl transition-opacity duration-300 group-hover:opacity-0"
+                />
+                <p
+                  className="absolute opacity-0 text-black text-lg 
+              transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  {tech.name}
+                </p>
               </div>
             ))}
           </div>
+        </Reveal>
+      </div>
+
+      {/* Tool Stack */}
+
+      <div className="max-w-3xl">
+        <Reveal>
+          <h1 className="text-3xl mb-2">Tool stack</h1>
+          <div className="h-[1px] bg-secondary/30 mb-4"></div>
+          <div className="flex flex-row flex-wrap gap-3 items-center justify-center md:justify-start">
+            {tools.map((tool, index) => (
+              <div
+                key={index}
+                className="group h-14 relative px-10 py-2 bg-blue-100 rounded-sm flex flex-col items-center justify-center transition-all duration-300 cursor-crosshair"
+              >
+                <tool.icon
+                  fill={tool.color}
+                  size={34}
+                  className="text-5xl transition-opacity duration-300 group-hover:opacity-0"
+                />
+                <p
+                  className="absolute opacity-0 text-black text-lg 
+              transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  {tool.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Recent Projects */}
+
+      <div className="max-w-3xl">
+        <Reveal>
+          <h1 className="text-3xl mb-2">Recent projects</h1>
+          <div className="h-[1px] bg-secondary/30 mb-4"></div>
+          {homedata.map((project, index) => (
+            <div
+              className="mb-6 rounded-sm overflow-hidden border border-secondary/50  text-secondary"
+              key={index}
+            >
+              <div className="p-4">
+                <a href={project.github}>
+                  <h3 className="text-xl mb-2">{project.name}</h3>
+                </a>
+                <p className="text-base text-secondary/80">
+                  {project.description}
+                </p>
+              </div>
+              <div className="px-4 py-2">
+                {project.tech?.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="mr-2 mb-2 px-3 py-1 text-sm text-gray-700 inline-block bg-gray-200 rounded-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
           <Link to="projects" className="z-10 ml-auto">
             <button className="px-4 py-1 text-xs bg-primary text-secondary border border-secondary italic">
-              View More
+              /projects
             </button>
           </Link>
+        </Reveal>
+      </div>
+
+      {/* Github Stats */}
+
+      <div className="max-w-3xl mx-auto w-full">
+        <h1 className="text-3xl mb-2">Github activity</h1>
+        <div className="h-[1px] bg-secondary/30 mb-4"></div>
+        <div className="flex justify-center opacity-80 pb-8 w-full">
+          <GitHubCalendar
+            username="karthikeyaspace"
+            blockSize={11}
+            blockMargin={3}
+            errorMessage="Could not load GitHub calendar of karthikeyaspace"
+            colorScheme={theme === "light" ? "dark" : "light"}
+            fontSize={10}
+          />
         </div>
-      </Reveal>
+      </div>
 
-      <Reveal>
-        <div className="md:max-w-[80%] lg:max-w-[50%] mx-auto">
-          <div className="flex flex-col mb-4 gap-2">
-            <h1 className="text-3xl">Github Stats</h1>
-            <div className="w-full h-[1px] bg-secondary/20"></div>
-          </div>
-          <div className="flex justify-center opacity-80 pb-8 w-full">
-            <GitHubCalendar
-              username="karthikeyaspace"
-              blockSize={11}
-              blockMargin={3}
-              errorMessage="Could not load GitHub calendar of karthikeyaspace"
-              colorScheme={theme === "light" ? "dark" : "light"}
-              fontSize={10}
-            />
-          </div>
-        </div>
-      </Reveal>
+      {/* Contact */}
 
-      <Reveal>
-        <div className="md:max-w-[80%] lg:max-w-[50%] mx-auto">
-          <div className="flex flex-col items-start mb-4 gap-1">
-            <h1 className="text-3xl">Contact Me</h1>
-            <p className="italic font-thin opacity-30 text-sm">
-              send me an email{" "}
-            </p>
-            <div className="w-full h-[1px] bg-secondary/20"></div>
-          </div>
-
-          <form
-            onSubmit={handleSubmit}
-            className="w-full sm:w-10/12 flex flex-col gap-2 mx-auto "
-          >
+      <div className="max-w-3xl w-full">
+        <Reveal>
+          <h1 className="text-3xl mb-2">Contact me</h1>
+          <div className="h-[1px] bg-secondary/30"></div>
+          <form onSubmit={handleSubmit} className="space-y-2">
             <p
-              className={`text-left text-sm italic  ${
+              className={`text-left text-sm py-1 italic  ${
                 stats.type === "success" ? "text-green-700" : "text-red-600"
               }`}
             >
-              {stats.message ? stats.message : <>&nbsp;</>}
+              {stats.message ? (
+                stats.message
+              ) : (
+                <p className="text-secondary/60">send me an email</p>
+              )}
             </p>
 
             <div className="w-full flex justify-center items-center flex-wrap gap-3">
@@ -258,8 +248,10 @@ const Home: React.FC = () => {
               )}
             </button>
           </form>
-        </div>
-      </Reveal>
+        </Reveal>
+      </div>
+
+      {/* Footer */}
 
       <div className="flex justify-center text-sm italic opacity-40">
         <p className="flex items-center">
