@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { links } from "../assets/constants";
+import { links } from "../data/constants";
 
 const Redirect: React.FC<{ site: "g" | "l" | "r" | "*" }> = ({ site }) => {
   const navigate = useNavigate();

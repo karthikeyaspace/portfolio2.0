@@ -189,7 +189,7 @@ const links = {
   linkedin: "https://www.linkedin.com/in/karthikeyaveruturi",
   email: "karthikeyaveruturi2004@gmail.com",
   resume:
-    "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9/view?usp=sharing",
+    "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9",
 };
 
 export { techs, links, tools };
