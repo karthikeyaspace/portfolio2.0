@@ -3,6 +3,7 @@ import { projects } from "../data/projects";
 import { useOutletContext } from "react-router-dom";
 import { SiGithub } from "react-icons/si";
 import { FaLocationArrow } from "react-icons/fa6";
+import { links } from "../data/constants";
 
 const Projects: React.FC = () => {
   const { theme } = useOutletContext<{ theme: string }>();
@@ -10,9 +11,17 @@ const Projects: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:pt-10 pb-10">
-      <p className="text-secondary/50 italic text-sm pb-4">
+      <p className="text-secondary/60 text-sm pb-4 flex flex-col gap-2">
         Last updated: 7th Dec 2024
+        <a
+          href={links.github + "?tab=repositories"}
+          target="_blank"
+          className="underline w-32"
+        >
+          See what I am Building now
+        </a>
       </p>
+
       <div className="flex flex-row flex-wrap justify-center gap-4">
         {projects.map((project, index) => (
           <div

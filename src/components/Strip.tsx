@@ -23,10 +23,10 @@ const Strip: React.FC = () => {
         variants={slideVariants}
         animate="animate"
       >
-        <img src="image.png" className="w-[1400px] object-contain opacity-20" />
-        <img src="image.png" className="w-[1400px] object-contain opacity-20" />
-        <img src="image.png" className="w-[1400px] object-contain opacity-20" />
-        <img src="image.png" className="w-[1400px] object-contain opacity-20" />
+        <img src="strip.png" className="w-[1400px] object-contain opacity-20" />
+        <img src="strip.png" className="w-[1400px] object-contain opacity-20" />
+        <img src="strip.png" className="w-[1400px] object-contain opacity-20" />
+        <img src="strip.png" className="w-[1400px] object-contain opacity-20" />
       </motion.div>
     </div>
   );
