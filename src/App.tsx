@@ -33,10 +33,8 @@ const Root: React.FC = () => {
   }, [theme]);
 
   useEffect(() => {
-    if (path === "/") document.title = `Karthikeya Veruturi`;
-    else if (path === "/projects")
-      document.title = `Projects | Karthikeya Veruturi`;
-    else if (path === "/resume" || path === "/r")
+    if (path === "/projects") document.title = `Projects | Karthikeya Veruturi`;
+    else if (path === "/resume")
       document.title = `Resume | Karthikeya Veruturi`;
   }, [path]);
 
