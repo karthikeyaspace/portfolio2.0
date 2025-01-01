@@ -4,14 +4,12 @@ import { IoHomeSharp } from "react-icons/io5";
 import { LuFileSpreadsheet } from "react-icons/lu";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+import { useTheme } from "./ThemeContext";
 
-const Navbar: React.FC<{
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
-}> = ({ theme, setTheme }) => {
+const Navbar: React.FC = () => {
   const location = useLocation();
   const path = location.pathname;
-  const darkTheme = theme === "dark";
+  const { theme, toggleTheme: handleTheme } = useTheme();
 
   const navelements = [
     {
@@ -30,10 +28,6 @@ const Navbar: React.FC<{
       logo: LuFileSpreadsheet,
     },
   ];
-
-  const handleTheme = () => {
-    setTheme((prevTheme: string) => (prevTheme === "light" ? "dark" : "light"));
-  };
 
   return (
     <nav className="z-20 h-20 w-screen fixed top-0 text-secondary ">
@@ -66,7 +60,11 @@ const Navbar: React.FC<{
         <div className="h-full w-64 flex mx-auto rounded-full backdrop-blur-lg bg-secondary/10 items-center">
           {navelements.map((element) => {
             const active =
-              path === element.link ? "#db2777" : darkTheme ? "white" : "black";
+              path === element.link
+                ? "#db2777"
+                : theme === "dark"
+                ? "white"
+                : "black";
             return (
               <Link
                 to={element.link}

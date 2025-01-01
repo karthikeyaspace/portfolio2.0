@@ -1,62 +1,86 @@
 import React from "react";
 import { projects } from "../data/projects";
-import { useOutletContext } from "react-router-dom";
 import { SiGithub } from "react-icons/si";
 import { FaLocationArrow } from "react-icons/fa6";
 import { links } from "../data/constants";
+import { useTheme } from "../components/ThemeContext";
 
 const Projects: React.FC = () => {
-  const { theme } = useOutletContext<{ theme: string }>();
-  const fillcolor = theme === "dark" ? "white" : "black";
+  const { theme } = useTheme();
+  const iconColor = theme === "dark" ? "white" : "black";
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:pt-10 pb-10">
-      <p className="text-secondary/60 text-sm pb-4 flex flex-col gap-2">
-        Last updated: 7th Dec 2024
+    <div className="max-w-7xl mx-auto px-4 pt-4 md:pt-20 pb-10">
+      {/* Header */}
+      <div className="mb-4">
+        <p className="text-secondary/60 text-sm mb-2">
+          Last updated: 7th Dec 2024
+        </p>
         <a
           href={links.github + "?tab=repositories"}
           target="_blank"
-          className="underline w-32"
+          rel="noopener noreferrer"
+          className="underline text-blue-500 hover:text-blue-600"
         >
-          See what I am Building now
+          See what I’m building now
         </a>
-      </p>
+      </div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-4">
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div
-            className="max-w-96 mb-12 rounded-sm overflow-hidden border border-secondary/40 bg-primary text-secondary"
             key={index}
+            className="border border-secondary/20 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
           >
-            <div className="px-6 py-4">
-              <div className="flex flex-row justify-between mb-3  ">
-                <a href={project.github}>
-                  <h3 className="text-xl mb-2">{project.name}</h3>
-                </a>
-                <div className="flex flex-row justify-center gap-2">
-                  <a href={project.github} target="_blank">
-                    {" "}
-                    <SiGithub fill={fillcolor} size={18} />
+            <div className="p-6">
+              {/* Project Header */}
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-semibold hover:underline">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.name}
+                  </a>
+                </h3>
+                <div className="flex gap-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80"
+                  >
+                    <SiGithub size={18} fill={iconColor} />
                   </a>
                   {project.try && (
-                    <a href={project.try} target="_blank">
-                      {" "}
-                      <FaLocationArrow fill={fillcolor} size={18} />
+                    <a
+                      href={project.try}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80"
+                    >
+                      <FaLocationArrow size={18} fill={iconColor} />
                     </a>
                   )}
                 </div>
               </div>
-              <p className="text-base text-secondary/80 pb-4">
-                {project.description}
-              </p>
-              {project.tech?.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 mb-2 px-3 py-1 text-sm text-primary inline-block bg-secondary/80 rounded-sm"
-                >
-                  {tech}
-                </span>
-              ))}
+
+              {/* Project Description */}
+              <p className="text-secondary/80 mb-4">{project.description}</p>
+
+              {/* Technologies Used */}
+              <div className="flex flex-wrap gap-2">
+                {project.tech?.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-sm bg-secondary/10 rounded-lg"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

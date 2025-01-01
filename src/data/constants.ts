@@ -32,6 +32,16 @@ import {
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
 
+
+const links = {
+  api: "https://api.itskv.me/kv/mail",
+  github: "https://github.com/karthikeyaspace",
+  linkedin: "https://www.linkedin.com/in/karthikeyaveruturi",
+  email: "karthikeyaveruturi2004@gmail.com",
+  resume:
+    "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9",
+};
+
 const techs = [
   {
     name: "C++",
@@ -183,13 +193,6 @@ const tools = [
   
 ];
 
-const links = {
-  api: "https://api.itskv.me/kv/mail",
-  github: "https://github.com/karthikeyaspace",
-  linkedin: "https://www.linkedin.com/in/karthikeyaveruturi",
-  email: "karthikeyaveruturi2004@gmail.com",
-  resume:
-    "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9",
-};
+
 
 export { techs, links, tools };
