@@ -1,9 +1,11 @@
 import React from "react";
 import { links } from "../data/constants";
+import { ResumeSEO } from "../components/SEO";
 
 const Resume: React.FC = () => {
   return (
     <div className="pt-20 max-w-2xl mx-auto px-4">
+      <ResumeSEO />
 
       <div className="rounded-lg overflow-hidden shadow-lg bg-secondary/50">
         <iframe

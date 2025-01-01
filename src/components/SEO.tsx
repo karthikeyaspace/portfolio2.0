@@ -37,4 +37,44 @@ const SEO: React.FC = () => {
   );
 };
 
+export const ProjectsSEO: React.FC = () => {
+  return (
+    <Helmet>
+      <title>Projects | Karthikeya Veruturi</title>
+
+      <meta property="og:image" content="https://itskv.me/seo.png" />
+      <meta property="og:url" content="https://itskv.me/projects" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Projects | Karthikeya Veruturi" />
+      <meta
+        name="twitter:description"
+        content="Explore Karthikeya Veruturi's projects in web development, software engineering, and more."
+      />
+      <meta name="twitter:image" content="https://itskv.me/seo.png" />
+      <link rel="canonical" href="https://itskv.me/projects" />
+    </Helmet>
+  );
+};
+
+export const ResumeSEO: React.FC = () => {
+  return (
+    <Helmet>
+      <title>Resume | Karthikeya Veruturi</title>
+
+      <meta property="og:image" content="https://itskv.me/seo.png" />
+      <meta property="og:url" content="https://itskv.me/resume" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Resume | Karthikeya Veruturi" />
+      <meta
+        name="twitter:description"
+        content="View Karthikeya Veruturi's resume, detailing his experience, skills, and achievements."
+      />
+      <meta name="twitter:image" content="https://itskv.me/seo.png" />
+      <link rel="canonical" href="https://itskv.me/resume" />
+    </Helmet>
+  );
+};
+
 export default SEO;

@@ -1,10 +1,11 @@
 import React from "react";
-import { FaBook } from "react-icons/fa6";
+import { FaBook, FaCode } from "react-icons/fa6";
 import { IoHomeSharp } from "react-icons/io5";
 import { LuFileSpreadsheet } from "react-icons/lu";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
+import { links } from "../data/constants";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -27,6 +28,11 @@ const Navbar: React.FC = () => {
       link: "/resume",
       logo: LuFileSpreadsheet,
     },
+    {
+      name: "Code",
+      link: links.github,
+      logo: FaCode,
+    },
   ];
 
   return (
@@ -40,19 +46,13 @@ const Navbar: React.FC = () => {
               <Link
                 to={element.link}
                 key={element.name}
-                className={`w-28 p-1 rounded-full hover:text-pink-500 text-center  ${active}`}
+                target={element.link === links.github ? "_blank" : "_self"}
+                className={`w-24 py-1 rounded-full hover:text-pink-500 text-center ${active}`}
               >
                 {element.name}
               </Link>
             );
           })}
-          <div onClick={handleTheme} className="cursor-pointer pr-2 pl-1 ">
-            {theme === "dark" ? (
-              <MdLightMode fill="white" size={20} />
-            ) : (
-              <MdDarkMode fill="black" size={20} />
-            )}
-          </div>
         </div>
       </div>
 
@@ -75,14 +75,17 @@ const Navbar: React.FC = () => {
               </Link>
             );
           })}
-          <div onClick={handleTheme} className="cursor-pointer px-6">
-            {theme === "dark" ? (
-              <MdLightMode size={18} fill="white" />
-            ) : (
-              <MdDarkMode size={18} fill="black" />
-            )}
-          </div>
         </div>
+      </div>
+      <div
+        onClick={handleTheme}
+        className="absolute top-5 right-5 cursor-pointer pr-2 pl-1 "
+      >
+        {theme === "dark" ? (
+          <MdLightMode fill="white" size={20} />
+        ) : (
+          <MdDarkMode fill="black" size={20} />
+        )}
       </div>
     </nav>
   );

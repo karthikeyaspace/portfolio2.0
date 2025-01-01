@@ -13,11 +13,11 @@ const Home: React.FC = () => {
   const homedata = Array.isArray(projects) ? projects.slice(0, 2) : [];
 
   return (
-    <div className="space-y-14 mx-auto flex flex-col items-center pt-10 px-4 md:px-0">
+    <div className="space-y-14 mx-auto flex flex-col items-center pt-10 ">
       <Landing />
 
       {/* About */}
-      <div className="max-w-3xl">
+      <div className="max-w-3xl px-4 md:px-0">
         <Reveal>
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <div className="space-y-2 text-secondary/80">
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
       </div>
 
       {/* Tech Stack */}
-      <div className="max-w-3xl">
+      <div className="max-w-3xl px-4 md:px-0">
         <Reveal>
           <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
           <div className="flex flex-wrap gap-3">
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
 
       {/* Tool Stack */}
 
-      <div className="max-w-3xl">
+      <div className="max-w-3xl px-4 md:px-0">
         <Reveal>
           <h2 className="text-2xl font-semibold mb-4">Tools I Use</h2>
           <div className="flex flex-wrap gap-3">
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
 
       {/* Recent Projects */}
 
-      <div className="max-w-3xl">
+      <div className="max-w-3xl px-4 md:px-0">
         <Reveal>
           <h2 className="text-2xl font-semibold mb-4">Recent Projects</h2>
           <div className="space-y-6">
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
 
       {/* Github Stats */}
 
-      <div className="max-w-3xl mx-auto w-full">
+      <div className="max-w-3xl px-4 md:px-0 mx-auto w-full">
         <h1 className="text-2xl font-semibold mb-4">Github activity</h1>
         <div className="flex justify-center opacity-80 pb-8 w-full">
           <GitHubCalendar

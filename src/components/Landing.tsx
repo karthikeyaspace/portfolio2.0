@@ -5,8 +5,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useTheme } from "./ThemeContext";
 
 const Landing: React.FC = () => {
-  const roles = ["CS Student", "Full Stack Dev", "ML Enthusiast"];
-  const q = ["Build", "Ship", "Innovate"];
+  const roles = [
+    "CS Student",
+    "Full Stack Dev",
+    "ML Enthusiast",
+    "Backend Dev",
+  ];
+  const q = ["Build", "Ship", "Innovate", "Break"];
   const [i, setI] = useState(0);
   const { theme } = useTheme();
   const iconfill = theme === "dark" ? "white" : "black";
@@ -35,28 +40,31 @@ const Landing: React.FC = () => {
       className="w-full px-2 py-8 min-h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
     >
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between w-full">
-        <div className="md:max-w-[60%]">
-          <motion.h1
-            className="text-3xl md:text-5xl font-bold mb-6"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between w-full">
+        <div className="block sm:hidden w-full mb-8">
+          <motion.img
+            src="/profile.png"
+            alt="Profile Picture"
+            className="w-40 h-40 mx-auto rounded-full shadow-lg select-none pointer-events-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            loading="lazy"
+            draggable="false"
+            onDragStart={(e) => e.preventDefault()}
+          />
+        </div>
+
+        <div className="w-full px-4 sm:px-0 md:max-w-[60%] text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Hey, I'm{" "}
-            <span className="text-6xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            <span className="text-5xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
               Karthikeya
             </span>
-          </motion.h1>
+          </h1>
 
-          <motion.div
-            className="text-2xl md:text-4xl mb-8"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
+          <div className="text-2xl md:text-4xl sm:mb-8 overflow-hidden whitespace-nowrap">
             I'm a{" "}
             <motion.span
               className="font-semibold text-blue-500 px-2 mx-2 bg-secondary"
@@ -65,23 +73,13 @@ const Landing: React.FC = () => {
             >
               {roles[i]}
             </motion.span>
-          </motion.div>
+          </div>
 
-          <motion.p
-            className="text-xl md:text-2xl mb-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
+          <p className="text-xl md:text-2xl sm:mb-10">
             based in <span className="font-semibold">Hyderabad, India</span>
-          </motion.p>
+          </p>
 
-          <motion.h2
-            className="text-3xl md:text-5xl font-bold mb-10"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
+          <h2 className="text-3xl md:text-5xl font-bold sm:mb-10 h-16 overflow-hidden whitespace-nowrap">
             I
             <motion.span
               className="font-semibold text-blue-500 px-2 mx-2 bg-secondary"
@@ -93,14 +91,9 @@ const Landing: React.FC = () => {
             <span className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
               THINGS
             </span>
-          </motion.h2>
+          </h2>
 
-          <motion.div
-            className="flex gap-6 items-center"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1.5 }}
-          >
+          <div className="flex gap-6 items-center">
             <a
               href="https://github.com/karthikeyaspace"
               target="_blank"
@@ -125,17 +118,17 @@ const Landing: React.FC = () => {
             >
               <FaXTwitter size={32} fill={iconfill} />
             </a>
-          </motion.div>
+          </div>
         </div>
 
-        <div className="hidden relative md:block md:w-[40%]">
+        <div className="hidden relative sm:block md:w-[40%]">
           <motion.img
             src="/profile.png"
             alt="Profile Picture"
             className="w-full max-w-[400px] rounded-full shadow-lg select-none pointer-events-none"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
             loading="lazy"
             draggable="false"
             onDragStart={(e) => e.preventDefault()}

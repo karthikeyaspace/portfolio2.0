@@ -4,6 +4,7 @@ import { SiGithub } from "react-icons/si";
 import { FaLocationArrow } from "react-icons/fa6";
 import { links } from "../data/constants";
 import { useTheme } from "../components/ThemeContext";
+import { ProjectsSEO } from "../components/SEO";
 
 const Projects: React.FC = () => {
   const { theme } = useTheme();
@@ -12,6 +13,7 @@ const Projects: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 pt-4 md:pt-20 pb-10">
       {/* Header */}
+      <ProjectsSEO />
       <div className="mb-4">
         <p className="text-secondary/60 text-sm mb-2">
           Last updated: 7th Dec 2024
