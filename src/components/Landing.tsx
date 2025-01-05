@@ -50,8 +50,9 @@ const Landing: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            loading="lazy"
+            loading="eager"
             draggable="false"
+            fetchPriority="high"
             onDragStart={(e) => e.preventDefault()}
           />
         </div>
@@ -129,7 +130,7 @@ const Landing: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            loading="lazy"
+            loading="eager"
             draggable="false"
             onDragStart={(e) => e.preventDefault()}
           />
