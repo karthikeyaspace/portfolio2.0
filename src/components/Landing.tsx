@@ -4,6 +4,18 @@ import { SiGithub, SiLinkedin } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTheme } from "./ThemeContext";
 
+
+const glowAnimation = {
+  animate: {
+    boxShadow: [
+      "0 0 80px 1px rgba(59, 130, 246, 0.9)",  // even brighter blue glow
+      "0 0 80px 1px rgba(168, 85, 247, 0.9)",  // even brighter purple glow
+      "0 0 80px 1px rgba(59, 130, 246, 0.9)",  // back to bright blue
+    ]
+  }
+};
+
+
 const Landing: React.FC = () => {
   const roles = [
     "CS Student",
@@ -48,11 +60,13 @@ const Landing: React.FC = () => {
             alt="Profile Picture"
             className="w-40 h-40 mx-auto rounded-full shadow-lg select-none pointer-events-none"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{
+              opacity: 1,
+              ...glowAnimation.animate
+            }}
             transition={{ delay: 0.3, duration: 0.6 }}
             loading="eager"
             draggable="false"
-            fetchPriority="high"
             onDragStart={(e) => e.preventDefault()}
           />
         </div>
@@ -128,7 +142,10 @@ const Landing: React.FC = () => {
             alt="Profile Picture"
             className="w-full max-w-[400px] rounded-full shadow-lg select-none pointer-events-none"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{
+              opacity: 1,
+              ...glowAnimation.animate
+            }}
             transition={{ delay: 0.3, duration: 0.6 }}
             loading="eager"
             draggable="false"

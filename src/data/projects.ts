@@ -6,159 +6,289 @@ interface DataTypes {
   try?: string;
 }
 
-export const projects: DataTypes[] = [
+/*  
+
+
   {
-    name: "E-commerce API",
-    description:
-      "Scalable e-commerce API built with TypeScript, Express, and Firebase. Key features include fetching recent orders, tracking user purchases, and calculating total stock. The API emphasizes clean code, modular design, and efficient database queries.",
-    github: "https://github.com/karthikeyaspace/e-commerce",
-    tech: ["Typescript", "Expressjs", "Firebase"],
+    "name": "",
+    "description": "",
+    "github": "",
+    "tech": [
+      "",
+      ""
+    ],
+    try: ""
   },
+
+
+*/
+
+const allprojects: DataTypes[] = [
   {
-    name: "ColdMailerGo",
-    description:
-      "Automates email communication by reading structured data from an Excel file, generating personalized email content using AI, and sending emails via an SMTP client. Includes config management, and AI integration, smtp client and efficient error handling.",
-    github: "https://github.com/karthikeyaspace/cold",
-    tech: ["Golang", "Gemini", "SMTP"],
-  },
-  {
-    name: "gorun",
-    description:
-      "Lightweight CLI tool built with Go that simplifies managing services for your full-stack projects. Using a gorun.yaml file, it lets users define and execute commands for frontend, backend, databases, and more with a single terminal command `gorun`.",
-    github: "https://github.com/karthikeyaspace/gorun",
-    tech: ["Golang"],
-  },
-  {
-    name: "CloudPreview",
-    description:
-      "A user-friendly service for instantly hosting static HTML files. Users can upload their HTML and CSS files to S3, generate a unique link, and view their site at any time.",
-    github: "https://github.com/karthikeyaspace/cdn-go",
-    tech: ["Golang", "AWS S3"],
-  },
-  {
-    name: "Task Manager",
-    description:
-      "A task manager app that helps you to manage your tasks efficiently. It is build using Golang, Postgres, Reactjs, Tailwind. It features task create, delete, edit and mark as completed.",
-    github: "https://github.com/karthikeyaspace/task-manager",
-    tech: ["Golang", "React JS", "Postgres", "Tailwind", "Docker"],
-  },
-  {
-    name: "Embeddable",
-    description:
-      "A platform to create and embed chatbot for your business or personal website. It is built using Reactjs, Fastapi, Python, Postgres, and Tailwind CSS. Featuring custom user authentication and authorization using jwt.",
-    github: "https://github.com/karthikeyaspace/embeddable",
-    tech: [
-      "React JS",
-      "TypeScript",
-      "Fastapi",
-      "Python",
-      "Postgres",
-      "Tailwind",
+    "name": "Task Manager",
+    "description": "A C++ task scheduler using doubly linked lists and queues. Features task creation, deletion, prioritization, and backup to a text file.",
+    "github": "https://github.com/karthikeyaspace/Task-Manager-cpp",
+    "tech": [
+      "C++",
+      "Data Structures"
     ],
   },
   {
-    name: "PhotolicAI",
-    description:
-      "AI-powered photorealistic image generator that uses the FLUX-schenell model via Replicate API, enabling users to create stunning images with seamless integration of Next.js, Prisma-Postgres, and Google OAuth.",
-    github: "https://github.com/karthikeyaspace/photolic",
-    tech: [
-      "NextJs",
+    "name": "SurfSafe",
+    "description": "A Python app that blocks malicious websites using the hosts file, enhancing internet safety and parental control.",
+    "github": "https://github.com/karthikeyaspace/SurfSafe.git",
+    "tech": [
+      "Python",
+      "Tkinter",
+      "Host File"
+    ]
+  },
+  {
+    "name": "Crypt0-Know",
+    "description": "A web app to check cryptocurrency prices using the CoinGecko API. Features a user-friendly interface and real-time updates.",
+    "github": "https://github.com/karthikeyaspace/Crypto-React-App.git",
+    "tech": [
+      "React JS",
+      "CoinGecko API",
+    ]
+  },
+  {
+    "name": "FOCUS",
+    "description": "A Python app that blocks distracting websites and apps using the hosts file, boosting productivity and parental control.",
+    "github": "https://github.com/karthikeyaspace/FOCUS.git",
+    "tech": [
+      "Python",
+      "Tkinter"
+    ]
+  },
+  {
+    "name": "Health symptom predictor",
+    "description": "A Flask-based ML app that predicts diseases using a decision tree classifier from scikit-learn based on user-input symptoms.",
+    "github": "https://github.com/karthikeyaspace/HealthCare",
+    "tech": [
+      "Reactjs",
+      "Flask",
+      "Machine Learning"
+    ],
+  },
+  {
+    "name": "NextPad",
+    "description": "A React and Node.js art-sharing app with JWT authentication, allowing users to share creative pieces and comment on them.",
+    "github": "https://github.com/karthikeyaspace/NextPad",
+    "tech": [
+      "React JS",
+      "Express",
+      "MongoDB"
+    ]
+  },
+  {
+    "name": "The Coder Companion",
+    "description": "An AI-powered coding platform with Gemini integration for code completion and query resolution, built with React and Node.js.",
+    "github": "https://github.com/karthikeyaspace/theCoderCompanion",
+    "tech": [
+      "React JS",
+      "Nodejs",
+      "Gemini API"
+    ],
+    "try": "https://the-coder-companion.vercel.app/"
+  },
+  {
+    "name": "College club website",
+    "description": "A React and Tailwind CSS website for a college club, showcasing events, testimonials, and team details, deployed on Vercel.",
+    "github": "https://github.com/vjdataquesters/website",
+    "tech": [
+      "React JS",
       "Tailwind",
+      "Vercel"
+    ],
+    "try": "https://vjdataquesters.vercel.app"
+  },
+  {
+    "name": "Shortifyy",
+    "description": "A URL shortening service offering a user-friendly interface for shortening and redirecting URLs",
+    "github": "https://github.com/karthikeyaspace/shortn",
+    "tech": [
+      "TypeScript",
+      "Tailwind",
+      "Node JS",
+      "Supabase"
+    ],
+    "try": "https://shortifyy.vercel.app"
+  },
+  {
+    "name": "CodeWatch",
+    "description": "A coding platform for exams and contests, monitoring tabs for suspicious activity and providing live stats to teachers.",
+    "github": "https://github.com/karthikeyaspace/codewatch",
+    "tech": [
+      "Typescript",
+      "Tailwind",
+      "Express",
+      "MongoDB",
+      "Judge0 API"
+    ]
+  },
+  {
+    "name": "Transferit",
+    "description": "A secure file-sharing app built with TypeScript, Supabase, and AWS S3, allowing password-protected and anonymous file transfers.",
+    "github": "https://github.com/karthikeyaspace/transferit",
+    "tech": [
+      "Typescript",
+      "Tailwind",
+      "Supabase",
+      "AWS S3"
+    ],
+    "try": "https://transferfile.vercel.app"
+  },
+  {
+    "name": "amailer",
+    "description": "An npm package for sending bulk emails using Nodemailer, Mailgun, and SendGrid, ideal for marketing campaigns.",
+    "github": "https://github.com/karthikeyaspace/amailer",
+    "tech": [
+      "Node JS",
+      "Typescript",
+      "Command line"
+    ],
+    "try": "https://npmjs.com/package/amailer"
+  },
+  {
+    "name": "ResearchGPT",
+    "description": "An AI tool using Gemini API for detailed explanations, with Supabase auth and Framer Motion for dynamic user experiences.",
+    "github": "https://github.com/karthikeyaspace/research-gpt",
+    "tech": [
+      "TypeScript",
+      "Supabase",
+      "Nodejs",
+      "Gemini API",
+      "Framer Motion"
+    ],
+    "try": "https://researchgptai.vercel.app"
+  },
+  {
+    "name": "Railmadad",
+    "description": "An AI-powered complaint management system for railways, built with TypeScript, Flask, and Supabase for SIH 2024.",
+    "github": "https://github.com/karthikeyaspace/railmadad",
+    "tech": [
+      "Typescript",
+      "Gemini api",
+      "i18n",
+      "Flask",
+      "Supabase"
+    ],
+    try: ""
+  },
+  {
+    "name": "Fullstack-Boilerplate",
+    "description": "A TypeScript React boilerplate for rapid web app development, featuring a clean and modular code structure.",
+    "github": "https://github.com/karthikeyaspace/Fullstack-Boilerplate",
+    "tech": [
+      "Typescript",
+      "Nodejs",
+      "Clean Code"
+    ],
+    try: ""
+  },
+  {
+    "name": "PhotolicAI",
+    "description": "AI-powered image generator that uses the flux-schnell model via Replicate API, enabling users to create stunning images.",
+    "github": "https://github.com/karthikeyaspace/photolic",
+    "tech": [
+      "NextJs",
       "Prisma ORM",
       "Postgres DB",
       "Google OAuth",
-      "Replicate API",
+      "Replicate API"
     ],
-    try: "https://photolic.vercel.app",
+    "try": "https://photolic.itskv.me"
   },
   {
-    name: "ResearchGPT",
-    description:
-      "Research GPT is an AI-driven tool leveraging the Gemini AI API, offering detailed, elaborated explanations with seamless Supabase authentication and dynamic Framer Motion integration for enhanced user experiences.",
-    github: "https://github.com/karthikeyaspace/research-gpt",
-    tech: [
+    "name": "Embeddable",
+    "description": "A platform to create and embed chatbots for websites, featuring custom user authentication and authorization using jwt",
+    "github": "https://github.com/karthikeyaspace/embeddable",
+    "tech": [
       "TypeScript",
-      "Supabase auth",
-      "Tailwind",
-      "Nodejs",
-      "Gemini API",
-      "Framer Motion",
+      "Fastapi-Python",
+      "Postgres",
+    ]
+  },
+  {
+    "name": "Task Manager",
+    "description": "A task manager app built with Golang, React, Postgres, and Tailwind, featuring task creation, editing, and completion.",
+    "github": "https://github.com/karthikeyaspace/task-manager",
+    "tech": [
+      "Golang",
+      "React JS",
+      "Postgres",
+      "Docker"
+    ]
+  },
+  {
+    "name": "CloudPreview",
+    "description": "A service for hosting static HTML files on AWS S3, generating unique links for instant previews.",
+    "github": "https://github.com/karthikeyaspace/cdn-go",
+    "tech": [
+      "Golang",
+      "AWS S3"
+    ]
+  },
+  {
+    "name": "Gorun",
+    "description": "A Go-based CLI tool to manage full-stack project services using a `gorun.yaml` file for streamlined execution.",
+    "github": "https://github.com/karthikeyaspace/gorun",
+    "tech": [
+      "Golang",
+      "Command line"
+    ]
+  },
+  {
+    "name": "ColdMailerGo",
+    "description": "A Go tool for automating personalized email campaigns using AI and SMTP, with Excel-based data input.",
+    "github": "https://github.com/karthikeyaspace/cold",
+    "tech": [
+      "Golang",
+      "Gemini",
+      "SMTP"
+    ]
+  },
+  {
+    "name": "E-commerce API",
+    "description": "A scalable e-commerce API built with TypeScript, Express, and Firebase for order tracking and stock management.",
+    "github": "https://github.com/karthikeyaspace/e-commerce",
+    "tech": [
+      "Typescript",
+      "Expressjs",
+      "Firebase"
+    ]
+  },
+  {
+    "name": "LLM Quantization",
+    "description": "LLM quantization using PyTorch and Hugging Face, using LLama 3.2 3b model",
+    "github": "https://colab.research.google.com/drive/1hAHoZEuvGrLI3oQzy3yJa88cjJ4SNrYw",
+    "tech": [
+      "Python",
+      "Pytorch",
+      "Llama 3.2 3b"
     ],
-    try: "https://researchgptai.vercel.app",
+    try: "https://colab.research.google.com/drive/1hAHoZEuvGrLI3oQzy3yJa88cjJ4SNrYw"
   },
   {
-    name: "amailer",
-    description:
-      "a npm package build on top of nodemailer, mailgun, sendgrid to send emails easily. It has a user-friendly documentation and is easy to use. It can send emails in bulk mainly used for marketing purposes.",
-    github: "https://github.com/karthikeyaspace/amailer",
-    tech: ["Node JS", "Typescript"],
-    try: "https://npmjs.com/package/amailer",
+    name: "Realtime Leaderboard",
+    description: "A real-time leaderboard system using Go and Redis, featuring score updates, player rankings, and fast data retrieval.",
+    github: "https://github.com/karthikeyaspace/realtime-leaderboard",
+    tech: [
+      "Golang",
+      "Redis"
+    ],
   },
   {
-    name: "Transferit",
-    description:
-      "Transferit is a file sharing application that allows you to share files securely and anonymously with an option of setting password. It is build using Typescript, Tailwind css, Supabase, AWS S3. It has a user-friendly interface and is easy to use.",
-    github: "https://github.com/karthikeyaspace/transferit",
-    tech: ["Typescript", "Tailwind", "Supabase", "AWS S3"],
-    try: "https://transferfile.vercel.app",
-  },
-  {
-    name: "CodeWatch",
-    description:
-      "A coding platform built to conduct lab exams and coding contests. This app actively monitor tabs while on test and block the student if suspicious activity is detected. Teacher can get live stats of the test.",
-    github: "https://github.com/karthikeyaspace/codewatch",
-    tech: ["Typescript", "Tailwind", "Express", "MongoDB", "Judge0 API"],
-  },
-  {
-    name: "Shortifyy",
-    description:
-      "Shortifyy is a URL shortening service that helps you to shorten your long URLs and redirects when you visit the short url. It is built using TypeScript, Tailwind CSS, Node JS, and Supabase Postgress db. It has a interactive user-friendly interface and is easy to use.",
-    github: "https://github.com/karthikeyaspace/shortn",
-    tech: ["TypeScript", "Tailwind", "Node JS", "Supabase"],
-    try: "https://shortifyy.vercel.app",
-  },
-  {
-    name: "College club website",
-    description:
-      "Designed, Developed and maintaining a website for college club showcasing about the club, events conducted, testimonials, team page etc. current deployed in vercel. Built using React JS, Tailwind CSS",
-    github: "https://github.com/vjdataquesters/website",
-    tech: ["React JS", "Tailwind", "Vercel"],
-    try: "https://vjdataquesters.vercel.app",
-  },
-  {
-    name: "The Coder Companion",
-    description:
-      "The coder Companion is a next generation coding platform equiped with gemini. It helps user to code efficiently. The AI powered code completion helps user to code faster and helps you to clear your queries.",
-    github: "https://github.com/karthikeyaspace/theCoderCompanion",
-    tech: ["React JS", "Nodejs", "Express", "CSS", "Gemini API"],
-    try: "https://the-coder-companion.vercel.app/",
-  },
-  {
-    name: "NextPad",
-    description:
-      "NextPad is a creative art sharing application built using reactjs, nodejs and mongodb. It allows users to share their creative pieces and lets the viewers write comments. It demonstrates tokenization using jwt for authentication.",
-    github: "https://github.com/karthikeyaspace/NextPad",
-    tech: ["React JS", "Nodejs", "Express", "MongoDB"],
-  },
-  {
-    name: "FOCUS",
-    description:
-      "Focus is a Python app enhancing focus by blocking distracting websites, automatically closing specified apps, and utilizing the hosts file. Ideal for boosting productivity and parental control by limiting access to unwanted sites and apps.",
-    github: "https://github.com/karthikeyaspace/FOCUS.git",
-    tech: ["Python", "Tkinter"],
-  },
-  {
-    name: "Crypt0-Know",
-    description:
-      "Crypt0-Know is a simple web application that helps you to know the current price of the cryptocurrencies. It uses the CoinGecko API to fetch the current price of the cryptocurrencies. It has a user-friendly interface and is easy to use.",
-    github: "https://github.com/karthikeyaspace/Crypto-React-App.git",
-    tech: ["React JS", "CoinGecko API", "CSS", "JavaScript"],
-  },
-  {
-    name: "SurfSafe",
-    description:
-      "SurfSafe, a Python app, enhances internet safety by automatically blocking malicious websites, safeguarding against phishing and cyber threats. It leverages the hosts file and HTTPS verification to ensure protection, doubling as parental control for blocking undesirable sites.",
-    github: "https://github.com/karthikeyaspace/SurfSafe.git",
-    tech: ["Python", "Tkinter", "Hosts File"],
-  },
-];
+    name: "Caching and Ratelimiting in go",
+    description: "A Go-based caching and API server with In-memory data Caching and rate-limiting (global and per-client limiting)",
+    github: "https://github.com/karthikeyaspace/cacherate-go",
+    tech: [
+      "Golang",
+      "Caching",
+      "Proxy server"
+    ],
+  }
+]
+
+export const projects = allprojects.reverse();
