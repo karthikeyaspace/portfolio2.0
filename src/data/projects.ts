@@ -4,6 +4,7 @@ interface DataTypes {
   github: string;
   tech: string[];
   try?: string;
+  fav?: boolean;
 }
 
 /*  
@@ -41,7 +42,8 @@ const allprojects: DataTypes[] = [
       "Python",
       "Tkinter",
       "Host File"
-    ]
+    ],
+    fav: true
   },
   {
     "name": "Crypt0-Know",
@@ -90,7 +92,8 @@ const allprojects: DataTypes[] = [
       "Nodejs",
       "Gemini API"
     ],
-    "try": "https://the-coder-companion.vercel.app/"
+    "try": "https://the-coder-companion.vercel.app/",
+    fav: true
   },
   {
     "name": "College club website",
@@ -101,7 +104,8 @@ const allprojects: DataTypes[] = [
       "Tailwind",
       "Vercel"
     ],
-    "try": "https://vjdataquesters.vercel.app"
+    "try": "https://vjdataquesters.vercel.app",
+    fav: true
   },
   {
     "name": "Shortifyy",
@@ -161,7 +165,8 @@ const allprojects: DataTypes[] = [
       "Gemini API",
       "Framer Motion"
     ],
-    "try": "https://researchgptai.vercel.app"
+    "try": "https://researchgptai.vercel.app",
+    fav: true
   },
   {
     "name": "Railmadad",
@@ -185,7 +190,8 @@ const allprojects: DataTypes[] = [
       "Nodejs",
       "Clean Code"
     ],
-    try: ""
+    try: "",
+    fav: true
   },
   {
     "name": "PhotolicAI",
@@ -198,7 +204,8 @@ const allprojects: DataTypes[] = [
       "Google OAuth",
       "Replicate API"
     ],
-    "try": "https://photolic.itskv.me"
+    "try": "https://photolic.itskv.me",
+    fav: true
   },
   {
     "name": "Embeddable",
@@ -208,10 +215,12 @@ const allprojects: DataTypes[] = [
       "TypeScript",
       "Fastapi-Python",
       "Postgres",
-    ]
+      "RAG"
+    ],
+    fav: true
   },
   {
-    "name": "Task Manager",
+    "name": "Task Manager Go",
     "description": "A task manager app built with Golang, React, Postgres, and Tailwind, featuring task creation, editing, and completion.",
     "github": "https://github.com/karthikeyaspace/task-manager",
     "tech": [
@@ -219,7 +228,8 @@ const allprojects: DataTypes[] = [
       "React JS",
       "Postgres",
       "Docker"
-    ]
+    ],
+    fav: true
   },
   {
     "name": "CloudPreview",
@@ -237,7 +247,8 @@ const allprojects: DataTypes[] = [
     "tech": [
       "Golang",
       "Command line"
-    ]
+    ],
+    fav: true
   },
   {
     "name": "ColdMailerGo",
@@ -268,7 +279,8 @@ const allprojects: DataTypes[] = [
       "Pytorch",
       "Llama 3.2 3b"
     ],
-    try: "https://colab.research.google.com/drive/1hAHoZEuvGrLI3oQzy3yJa88cjJ4SNrYw"
+    try: "https://colab.research.google.com/drive/1hAHoZEuvGrLI3oQzy3yJa88cjJ4SNrYw",
+    fav: true
   },
   {
     name: "Realtime Leaderboard",
@@ -278,6 +290,7 @@ const allprojects: DataTypes[] = [
       "Golang",
       "Redis"
     ],
+    fav: true
   },
   {
     name: "Caching and Ratelimiting in go",

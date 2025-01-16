@@ -5,6 +5,8 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { links } from "../data/constants";
 import { useTheme } from "../components/ThemeContext";
 import { ProjectsSEO } from "../components/SEO";
+import { glowAnimation } from "../components/Landing";
+import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
   const { theme } = useTheme();
@@ -38,9 +40,10 @@ const Projects: React.FC = () => {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="p-4 border border-secondary/20 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            animate={project.fav ? glowAnimation.animate : undefined}
           >
             {/* Project Header */}
             <div className="flex justify-between items-center mb-4">
@@ -89,10 +92,11 @@ const Projects: React.FC = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
+      <p className="my-10 text-sm italic text-gray-500">*projects that are glowing are my personal favorite</p>
 
     </div>
   );

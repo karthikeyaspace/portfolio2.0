@@ -5,7 +5,7 @@ const SEO: React.FC = () => {
   return (
     <Helmet>
       <title>Karthikeya Veruturi | Portfolio</title>
-      <link rel="icon" type="image/svg+xml" href="/profile.png" />
+      <link rel="icon" type="image/png" href="profile.png" />
       <meta
         name="description"
         content="Explore Karthikeya Veruturi's portfolio showcasing projects, skills, and achievements in web development and beyond."
