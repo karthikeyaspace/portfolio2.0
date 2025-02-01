@@ -301,6 +301,37 @@ const allprojects: DataTypes[] = [
       "Caching",
       "Proxy server"
     ],
+  },
+  {
+    name: "Dietify",
+    description: "A personalized diet recommendation system using Retrieval Augmented Generation and LangChain for AI-powered nutrition advice.",
+    github: "https://github.com/karthikeyaspace/dietify",
+    tech: [
+      "Python",
+      "RAG",
+      "Langchain"
+    ],
+  },
+  {
+    name: "Hospital AI",
+    description: "A Telegram bot used for hospital services, allowing patients to book appointments, medical reports, using chat.",
+    github: "https://github.com/karthikeyaspace/hospital-ai",
+    tech: [
+      "Python",
+      "Telegram bot",
+      "Automation"
+    ],
+    fav: true
+  },
+  {
+    name: "Story to Video generator",
+    description: "AI tool that transforms regional folk stories into animated short films with visuals and regional voiceovers.",
+    github: "https://github.com/karthikeyaspace/story-to-video-generator",
+    tech: [
+      "Python",
+      "Gemini AI",
+      "Stable diffusion"
+    ],
   }
 ]
 

@@ -5,14 +5,21 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { links } from "../data/constants";
 import { useTheme } from "../components/ThemeContext";
 import { ProjectsSEO } from "../components/SEO";
-import { glowAnimation } from "../components/Landing";
 import { motion } from 'framer-motion';
+
+const glowAnimation = {
+  animate: {
+    boxShadow: [
+      "0 0 30px 10px rgba(59, 130, 246, 0.7)", 
+    ]
+  }
+};
+
+const lastUpdated = "1st Feb 2025";
 
 const Projects: React.FC = () => {
   const { theme } = useTheme();
   const iconColor = theme === "dark" ? "white" : "black";
-
-  console.log(projects)
 
   return (
     <div className="max-w-7xl mx-auto px-4 pt-4 md:pt-20 pb-10">
@@ -20,8 +27,8 @@ const Projects: React.FC = () => {
       <ProjectsSEO />
       <div className="flex flex-row justify-between items-center mb-4">
         <div>
-          <p className="text-secondary/60 text-sm mb-2">
-            Last updated: 8th Jan 2025
+          <p className="text-secondary/80 text-sm mb-2">
+            Last updated: {lastUpdated}
           </p>
           <a
             href={links.github + "?tab=repositories"}
@@ -38,11 +45,11 @@ const Projects: React.FC = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="p-4 border border-secondary/20 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="p-4 border border-secondary/20 overflow-hidden hover:shadow-lg transition-shadow duration-300"
             animate={project.fav ? glowAnimation.animate : undefined}
           >
             {/* Project Header */}

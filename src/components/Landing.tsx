@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useTheme } from "./ThemeContext";
 
 
-export const glowAnimation = {
+const glowAnimation = {
   animate: {
     boxShadow: [
       "0 0 80px 1px rgba(59, 130, 246, 0.9)",  // even brighter blue glow
