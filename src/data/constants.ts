@@ -43,21 +43,20 @@ import {
 const experiences = [
   {
     role: "Frontend Next.js Developer Intern",
-    company: "Intripid Inc",
+    company: "Intripid Inc (Remote)",
     tenure: "Jan 2025 - present",
     description:
-      "Developing and enhancing user-friendly UI/UX for a seamless platform for itinerary creation, trip management, trip planning",
+      "Developing and enhancing user-friendly UI/UX for a seamless platform for travel discovery, itinerary creation, trip management, travel planning",
     tech: [
-      { name: "Next.js", icon: FaReact, color: "#3B82F6" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#696969" },
       { name: "TypeScript", icon: SiTypescript, color: "#3B82F6" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#3B82F6" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#3B82F6" },
       { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
-      { name: "Amplify", icon: SiAmazonwebservices, color: "#FF9900" },
-      { name: "WebSocket", icon: HiMiniArrowsRightLeft, color: "#808080" },
-      { name: "Mapbox GL", icon: SiMapbox, color: "#4264FB" },
+      { name: "WebSocket", icon: HiMiniArrowsRightLeft, color: "#696969" },
+      { name: "Mapbox", icon: SiMapbox, color: "#4264FB" },
     ],
     tools: [
-      { name: "Slack", icon: SiSlack, color: "#611F69" },
+      { name: "Slack", icon: SiSlack, color: "#da1d5b" },
       { name: "Trello", icon: SiTrello, color: "#0079BF" },
       { name: "Figma", icon: SiFigma, color: "#F24E1E" },
     ],
