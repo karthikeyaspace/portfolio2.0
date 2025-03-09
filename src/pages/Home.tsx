@@ -2,11 +2,11 @@ import React from "react";
 import Landing from "../components/Landing";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
-import { BiHeart } from "react-icons/bi";
 import { techs, tools } from "../data/constants";
 import { projects } from "../data/projects";
 import GitHubCalendar from "react-github-calendar";
 import { useTheme } from "../components/ThemeContext";
+import { HiHeart } from "react-icons/hi";
 
 const Home: React.FC = () => {
   const { theme } = useTheme();
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
       <div className="flex justify-center text-sm italic opacity-40">
         <p className="flex items-center">
           built by <span className="ml-1 underline">karthikeya</span>
-          <BiHeart className="ml-1" fill="red" color="red"/>
+          <HiHeart className="ml-1" color="red"/>
         </p>
       </div>
     </div>
