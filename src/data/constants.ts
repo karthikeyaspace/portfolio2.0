@@ -29,16 +29,46 @@ import {
   SiVisualstudiocode,
   SiAmazonwebservices,
 } from "react-icons/si";
+import { HiMiniArrowsRightLeft } from "react-icons/hi2";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
+import {
+  SiGraphql,
+  SiSlack,
+  SiTrello,
+  SiFigma,
+  SiMapbox,
+} from "react-icons/si";
 
+const experiences = [
+  {
+    role: "Frontend Next.js Developer Intern",
+    company: "Intripid Inc",
+    tenure: "Jan 2025 - present",
+    description:
+      "Developing and enhancing user-friendly UI/UX for a seamless platform for itinerary creation, trip management, trip planning",
+    tech: [
+      { name: "Next.js", icon: FaReact, color: "#3B82F6" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3B82F6" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#3B82F6" },
+      { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+      { name: "Amplify", icon: SiAmazonwebservices, color: "#FF9900" },
+      { name: "WebSocket", icon: HiMiniArrowsRightLeft, color: "#808080" },
+      { name: "Mapbox GL", icon: SiMapbox, color: "#4264FB" },
+    ],
+    tools: [
+      { name: "Slack", icon: SiSlack, color: "#611F69" },
+      { name: "Trello", icon: SiTrello, color: "#0079BF" },
+      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+    ],
+  },
+];
 
 const links = {
   github: "https://github.com/karthikeyaspace",
   linkedin: "https://www.linkedin.com/in/karthikeyaveruturi",
   email: "karthikeyaveruturi2004@gmail.com",
-  resume:
-    "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9",
+  resume: "https://drive.google.com/file/d/1ymfNaZMDeBEVfmCYxL4Ey1gKO8KAGOy9",
 };
 
 const techs = [
@@ -189,9 +219,6 @@ const tools = [
     icon: SiAmazonwebservices,
     color: "#FF9900",
   },
-  
 ];
 
-
-
-export { techs, links, tools };
+export { techs, links, tools, experiences };
