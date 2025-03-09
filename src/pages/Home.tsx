@@ -138,7 +138,7 @@ const Home: React.FC = () => {
       <div className="flex justify-center text-sm italic opacity-40">
         <p className="flex items-center">
           built by <span className="ml-1 underline">karthikeya</span>
-          <BiHeart className="ml-1" />
+          <BiHeart className="ml-1" fill="red" color="red"/>
         </p>
       </div>
     </div>
