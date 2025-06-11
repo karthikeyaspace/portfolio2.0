@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { FaXTwitter } from "react-icons/fa6";
 import { useTheme } from "./ThemeContext";
 
 
@@ -74,7 +73,7 @@ const Landing: React.FC = () => {
         <div className="w-full px-4 sm:px-0 md:max-w-[60%] text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Hey, I'm{" "}
-            <span className="text-5xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+            <span className="text-5xl md:text-7xl bg-clip-text selection:text-white text-transparent bg-gradient-to-r from-blue-500 via-purple-600 to-purple-400">
               Karthikeya
             </span>
           </h1>
@@ -103,7 +102,7 @@ const Landing: React.FC = () => {
             >
               {q[i]}
             </motion.span>
-            <span className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+            <span className="text-4xl md:text-6xl font-extrabold selection:text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
               THINGS
             </span>
           </h2>
@@ -124,14 +123,6 @@ const Landing: React.FC = () => {
               className="transform hover:scale-110 transition-transform duration-200"
             >
               <SiLinkedin size={32} fill={iconfill} />
-            </a>
-            <a
-              href="https://x.com/karthikeyaspace"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transform hover:scale-110 transition-transform duration-200"
-            >
-              <FaXTwitter size={32} fill={iconfill} />
             </a>
           </div>
         </div>

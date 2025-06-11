@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 const glowAnimation = {
   animate: {
     boxShadow: [
-      "0 0 30px 10px rgba(59, 130, 246, 0.7)", 
+      "0 0 20px 7px rgba(59, 130, 246, 0.7)", 
     ]
   }
 };
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
             href={links.github + "?tab=repositories"}
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-blue-500 hover:text-blue-600"
+            className="underline text-pink-500 hover:text-pink-700"
           >
             See what I’m building now
           </a>

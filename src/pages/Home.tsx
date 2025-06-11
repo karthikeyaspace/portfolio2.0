@@ -182,9 +182,16 @@ const Home: React.FC = () => {
 
       {/* Footer */}
 
-      <div className="flex justify-center text-sm italic opacity-40">
+      <div className="flex justify-center text-sm italic opacity-40 hover:opacity-100 cursor-pointer">
         <p className="flex items-center">
-          built by <span className="ml-1 underline">karthikeya</span>
+          built by{" "}
+          <a
+            href="https://linkedin.com/in/karthikeyaveruturi"
+            target="_blank"
+            className="ml-1 underline"
+          >
+            karthikeya
+          </a>
           <HiHeart className="ml-1" color="red" />
         </p>
       </div>

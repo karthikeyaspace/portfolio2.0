@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBook, FaCode } from "react-icons/fa6";
+import { FaBook } from "react-icons/fa6";
 import { IoHomeSharp } from "react-icons/io5";
 import { LuFileSpreadsheet } from "react-icons/lu";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
@@ -28,17 +28,12 @@ const Navbar: React.FC = () => {
       link: "/resume",
       logo: LuFileSpreadsheet,
     },
-    {
-      name: "Code",
-      link: links.github,
-      logo: FaCode,
-    },
   ];
 
   return (
     <nav className="z-20 h-20 w-screen fixed top-0 text-secondary ">
-      <div className="hidden md:flex h-full backdrop-blur-sm  justify-center items-center">
-        <div className="flex items-center text-md rounded-full border border-secondary/30 bg-primary">
+      <div className="hidden md:flex h-full  justify-center items-center">
+        <div className="flex items-center text-md rounded-full bg-secondary/15 backdrop-blur-xl shadow-lg">
           {navelements.map((element) => {
             const active =
               path === element.link ? "text-pink-600" : "text-secondary";
@@ -47,7 +42,7 @@ const Navbar: React.FC = () => {
                 to={element.link}
                 key={element.name}
                 target={element.link === links.github ? "_blank" : "_self"}
-                className={`w-24 py-1 rounded-full hover:text-pink-500 text-center ${active}`}
+                className={`w-28 py-3 rounded-full hover:text-pink-500 transition-colors duration-500 text-center ${active}`}
               >
                 {element.name}
               </Link>
@@ -57,7 +52,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="fixed bottom-3 left-0 right-0 w-full md:hidden z-20 ">
-        <div className="h-full w-64 flex mx-auto rounded-full backdrop-blur-lg bg-secondary/10 items-center">
+        <div className="grid grid-cols-3 w-52 mx-auto items-center text-md rounded-full bg-secondary/15 backdrop-blur-xl shadow-lg">
           {navelements.map((element) => {
             const active =
               path === element.link

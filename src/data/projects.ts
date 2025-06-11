@@ -332,6 +332,18 @@ const allprojects: DataTypes[] = [
       "Gemini AI",
       "Stable diffusion"
     ],
+  },
+  {
+    name: "Express.cpp",
+    description: "HTTP server library in C++ supporting API routing, static file serving, handling multiple connections, and in-memory request queuing with thread-pool and logging.",
+    github: "https://github.com/karthikeyaspace/express.cpp",
+    tech: [
+      "C++",
+      "Cmake",
+      "TCP sockets",
+      "Linux"
+    ],
+    fav: true
   }
 ]
 
