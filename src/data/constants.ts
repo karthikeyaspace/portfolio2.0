@@ -19,7 +19,6 @@ import {
   SiTypescript,
   SiDiscord,
   SiDocker,
-  SiFramer,
   SiGithub,
   SiGooglecloud,
   SiNotion,
@@ -44,7 +43,7 @@ const experiences = [
   {
     role: "Frontend Next.js Developer Intern",
     company: "Intripid Inc (Remote)",
-    tenure: "Jan 2025 - present",
+    tenure: "Jan 2025 - June 2025",
     description:
       "Developing and enhancing user-friendly UI/UX for a seamless platform for travel discovery, itinerary creation, trip management, travel planning",
     tech: [
@@ -186,11 +185,6 @@ const tools = [
   {
     name: "Github",
     icon: SiGithub,
-    color: "#000000",
-  },
-  {
-    name: "Framer",
-    icon: SiFramer,
     color: "#000000",
   },
   {
