@@ -22,20 +22,11 @@ const Home: React.FC = () => {
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <div className="space-y-2 text-secondary/80">
             <p className="text-lg leading-snug">
-              A 3rd-year Computer Science student from Hyderabad, India, with a
-              passion for Full-stack development, Generative AI, Machine
-              learning and Golang. I love to build things in public and write
-              clean code. I Learn new tech by building projects with it.
-              Constantly seeking new opportunities to learn and grow, I thrive
-              in collaborative work and team environments. Beyond tech, I enjoy
-              playing basketball, cricket, and watching movies.
+              I am a Final year Computer Science student from Hyderabad, India, with a passion for Systems Programming, Scalable and Distributed Systems, and Backend Development. 
+              I prefer a practical, hands-on approach to learning, exploring new technologies through real projects and pushing them to practical use. 
+              I aim to build systems that are reliable, efficient, and built to scale.
+              <br />
             </p>
-            <Link
-              to={"/resume"}
-              className="underline text-blue-500 leading-8 italic"
-            >
-              peek at my resume
-            </Link>
           </div>
         </Reveal>
       </div>
@@ -81,7 +72,7 @@ const Home: React.FC = () => {
 
       <div className="w-full max-w-3xl px-4 md:px-0">
         <Reveal>
-          <h2 className="text-2xl font-semibold mb-4">Experiences</h2>
+          <h2 className="text-2xl font-semibold mb-4">Experience(s)</h2>
           <div className="space-y-6">
             {experiences.map((experience, index) => (
               <div

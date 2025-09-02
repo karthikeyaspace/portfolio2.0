@@ -1,14 +1,11 @@
 import {
-  FaCss3,
   FaGitAlt,
   FaGolang,
-  FaHtml5,
   FaNode,
   FaPython,
   FaReact,
 } from "react-icons/fa6";
 import { PiFileSqlBold } from "react-icons/pi";
-import { IoLogoJavascript } from "react-icons/io5";
 import {
   SiCplusplus,
   SiFastapi,
@@ -27,6 +24,7 @@ import {
   SiVercel,
   SiVisualstudiocode,
   SiAmazonwebservices,
+  SiDjango,
 } from "react-icons/si";
 import { HiMiniArrowsRightLeft } from "react-icons/hi2";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -81,18 +79,18 @@ const techs = [
     color: "#F59E0B",
   },
   {
-    name: "HTML",
-    icon: FaHtml5,
-    color: "#EF4444",
-  },
-  {
-    name: "CSS",
-    icon: FaCss3,
-    color: "#3B82F6",
+    name: "Django",
+    icon: SiDjango,
+    color: "#ffffff",
   },
   {
     name: "React",
     icon: FaReact,
+    color: "#3B82F6",
+  },
+  {
+    name: "TypeScript",
+    icon: SiTypescript,
     color: "#3B82F6",
   },
   {
@@ -106,19 +104,9 @@ const techs = [
     color: "#3B82F6",
   },
   {
-    name: "JavaScript",
-    icon: IoLogoJavascript,
-    color: "#f7e025",
-  },
-  {
     name: "Node.js",
     icon: FaNode,
     color: "#10B981",
-  },
-  {
-    name: "TypeScript",
-    icon: SiTypescript,
-    color: "#3B82F6",
   },
   {
     name: "Tailwind CSS",

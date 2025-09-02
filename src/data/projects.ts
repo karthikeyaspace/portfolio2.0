@@ -339,9 +339,21 @@ const allprojects: DataTypes[] = [
     github: "https://github.com/karthikeyaspace/express.cpp",
     tech: [
       "C++",
-      "Cmake",
+      "cmake",
       "TCP sockets",
       "Linux"
+    ],
+    fav: true
+  },
+  {
+    name: "Venus DB",
+    description: "A relational DBMS built from scratch in C++ with modular architecture, featuring storage engine, buffer pool manager, SQL parser, binder, planner, query processing.",
+    github: "https://github.com/karthikeyaspace/venus-db",
+    tech: [
+      "C++",
+      "cmake",
+      "Database Systems",
+      "OOPs",
     ],
     fav: true
   }
