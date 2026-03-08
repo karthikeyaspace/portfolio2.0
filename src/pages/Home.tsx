@@ -2,7 +2,7 @@ import React from "react";
 import Landing from "../components/Landing";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
-import { experiences, techs, tools } from "../data/constants";
+import { experiences, links, techs, tools } from "../data/constants";
 import { projects } from "../data/projects";
 import GitHubCalendar from "react-github-calendar";
 import { useTheme } from "../components/ThemeContext";
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
 
       <div className="w-full max-w-3xl px-4 md:px-0">
         <Reveal>
-          <h2 className="text-2xl font-semibold mb-4">Experience(s)</h2>
+          <h2 className="text-2xl font-semibold mb-4">Work</h2>
           <div className="space-y-6">
             {experiences.map((experience, index) => (
               <div
@@ -85,11 +85,11 @@ const Home: React.FC = () => {
                     {experience.tenure}
                   </p>
                 </div>
-                <p className="text-secondary/80">{experience.company}</p>
+                <p className="text-secondary/80 text-lg">{experience.company}</p>
                 <p className="mt-2 text-secondary/80">
                   {experience.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {experience.tech.map((tech, index) => (
                     <span
                       key={index}
@@ -97,15 +97,6 @@ const Home: React.FC = () => {
                     >
                       <tech.icon fill={tech.color} size={20} />
                       <span className="text-secondary/80">{tech.name}</span>
-                    </span>
-                  ))}
-                  {experience.tools.map((tool, index) => (
-                    <span
-                      key={index}
-                      className="flex items-center gap-2 px-2 py-1 text-sm bg-secondary/10 rounded-lg"
-                    >
-                      <tool.icon fill={tool.color} size={20} />
-                      <span className="text-secondary/80">{tool.name}</span>
                     </span>
                   ))}
                 </div>
@@ -177,7 +168,7 @@ const Home: React.FC = () => {
         <p className="flex items-center">
           built by{" "}
           <a
-            href="https://linkedin.com/in/karthikeyaveruturi"
+            href={links.github}
             target="_blank"
             className="ml-1 underline"
           >

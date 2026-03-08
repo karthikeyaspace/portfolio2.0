@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
           </a>
         </div>
         <p className="text-gray-500 text-sm italic">
-          {projects.length} projects found
+          {projects.length} projects
         </p>
       </div>
 
@@ -103,7 +103,7 @@ const Projects: React.FC = () => {
         ))}
       </div>
 
-      <p className="my-10 text-sm italic text-gray-500">*projects that are glowing are my personal favorite</p>
+      <p className="my-10 text-sm italic text-gray-500">*glowing projects are my personal favorite</p>
 
     </div>
   );

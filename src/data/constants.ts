@@ -26,36 +26,38 @@ import {
   SiAmazonwebservices,
   SiDjango,
 } from "react-icons/si";
-import { HiMiniArrowsRightLeft } from "react-icons/hi2";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
 import {
   SiGraphql,
-  SiSlack,
-  SiTrello,
-  SiFigma,
   SiMapbox,
 } from "react-icons/si";
 
 const experiences = [
   {
+    role: "SDE (Backend) Intern",
+    company: "AltiusHub",
+    tenure: "Sept 2025 - Present",
+    description:
+      "",
+    tech: [
+      { name: "Django", icon: SiDjango, color: "#696969" },
+      { name: "PostgreSQL", icon: BiLogoPostgresql, color: "#3B82F6" },
+    ],
+    tools: [],
+  },
+  {
     role: "Frontend Next.js Developer Intern",
-    company: "Intripid Inc (Remote)",
+    company: "Intripid (Remote)",
     tenure: "Jan 2025 - June 2025",
     description:
-      "Developing and enhancing user-friendly UI/UX for a seamless platform for travel discovery, itinerary creation, trip management, travel planning",
+      "",
     tech: [
       { name: "Next.js", icon: SiNextdotjs, color: "#696969" },
       { name: "TypeScript", icon: SiTypescript, color: "#3B82F6" },
-      { name: "Tailwind", icon: SiTailwindcss, color: "#3B82F6" },
       { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
-      { name: "WebSocket", icon: HiMiniArrowsRightLeft, color: "#696969" },
       { name: "Mapbox", icon: SiMapbox, color: "#4264FB" },
-    ],
-    tools: [
-      { name: "Slack", icon: SiSlack, color: "#da1d5b" },
-      { name: "Trello", icon: SiTrello, color: "#0079BF" },
-      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
+      { name: "Tailwind", icon: SiTailwindcss, color: "#3B82F6" },
     ],
   },
 ];
@@ -81,7 +83,7 @@ const techs = [
   {
     name: "Django",
     icon: SiDjango,
-    color: "#ffffff",
+    color: "#696969",
   },
   {
     name: "React",
